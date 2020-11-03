@@ -16,12 +16,35 @@ namespace OnlineShop.Controllers
     {
         //
         // GET: /Product
-        public ActionResult Index()
+        public ActionResult Index(int? gia = null, int? loaiSanPham = null)
         {
             var productDao = new ProductDao();
-            ViewBag.NewProducts = productDao.ListNewProduct(4);
-            ViewBag.ListProduct = productDao.ListProduct();
-            ViewBag.ListFeatureProducts = productDao.ListFeatureProduct(4);
+            SetViewBag();
+            // Tất cả
+            if (gia == null && loaiSanPham == null)
+            {
+                ViewBag.ListProduct = productDao.ListProduct();
+            }
+            // Giá từ thấp đến cao và loại sản phẩm là rỗng
+            else if (gia == 1 && loaiSanPham == null)
+            {
+                ViewBag.ListProduct = productDao.ListProduct().OrderBy(x => x.Price).ToList();
+            }
+            // Giá từ cao đến thấp và loại sản phẩm là rỗng
+            else if (gia == 2 && loaiSanPham == null)
+            {
+                ViewBag.ListProduct = productDao.ListProduct().OrderByDescending(x => x.Price).ToList();
+            }
+            // Giá từ thấp đến cao và loại sản phẩm khác rỗng
+            else if (gia == 1 && loaiSanPham != null)
+            {
+                ViewBag.ListProduct = productDao.ListProduct().Where(x=>x.CategoryID == loaiSanPham).OrderBy(x => x.Price).ToList();
+            }
+            // Giá từ cao đến thấp và loại sản phẩm khác rỗng
+            else if (gia == 2 && loaiSanPham != null)
+            {
+                ViewBag.ListProduct = productDao.ListProduct().Where(x => x.CategoryID == loaiSanPham).OrderByDescending(x => x.Price).ToList();
+            }
             return View();
         }
         [ChildActionOnly]
@@ -129,6 +152,12 @@ namespace OnlineShop.Controllers
         public void UpdateUsingStored(long id)
         {
             ProductViewCount.Update(id);
+        }
+        // viewbag truyen dropdownlist category
+        public void SetViewBag(long? selectedId = null)
+        {
+            var dao = new ProductCategoryDao();
+            ViewBag.CategoryID = new SelectList(dao.ListNotParentID(), "ID", "Name", selectedId);
         }
     }
 }

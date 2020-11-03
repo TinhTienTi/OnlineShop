@@ -1,5 +1,5 @@
 ﻿@{
-    ViewBag.Title = "Trang Chủ";
+    ViewBag.Title = "Sản phẩm";
     Layout = "~/Views/Shared/_Layout.cshtml";
     var listProducts = (List<Models.EF.Product>)ViewBag.ListProduct;
 }
@@ -51,7 +51,27 @@
 <br />
 <div class="content">
     <div>
-        <label style="float:right;">Xếp xeo theo: </label>
+
+        @using (Html.BeginForm())
+        {
+            <label>Xếp xeo theo: </label>
+            // Sắp xếp theo giá
+            @Html.DropDownList("gia", new SelectList(new []
+                      { new {value="",text="------ Tất cả -----"},
+                        new {value="1",text="Giá từ thấp đến cao"},
+                        new {value="2",text="Giá từ cao đến thấp"}
+                     },"value","text"), new { htmlAttributes = new { @class = "form-control" }})
+            <label>Loại sản phẩm: </label>
+            // Sắp xếp theo thể loại
+            @Html.DropDownList("loaiSanPham", new SelectList(new []
+                     { new {value="",text="------ Tất cả -----"},
+                       new {value="3",text="Tivi"},
+                       new {value="14",text="Daniel Wellington"},
+                       new {value="18",text="Samsung"},
+                       new {value="17",text="Apple"},
+                    },"value","text"), new { htmlAttributes = new { @class = "form-control" }})
+            <input type="submit" value="Lọc" />
+        }
     </div>
     <div class="container">
         <div class="row">
