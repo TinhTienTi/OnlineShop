@@ -1,0 +1,26 @@
+﻿@model List<Models.EF.Menu>
+
+<div class="account_desc">
+    @{
+        var session = (OnlineShop.Common.UserLogin)Session[OnlineShop.Common.CommonConstants.USER_SESSION];
+    }
+    @if (session == null)
+    {
+        <ul>
+            @foreach (var item in Model)
+            {
+                <li><a href="@item.Link" target="@item.Target"><button type="button" class="btn btn-primary">@item.Text</button></a></li>
+            }
+
+        </ul>
+    }
+    else
+    {
+        <ul>
+            <li>Xin chào:@session.UserName</li>
+            <li>@Html.ActionLink("Thoát", "Logout", "User")</li>
+        </ul>
+    }
+
+</div>
+<div class="clear"></div>

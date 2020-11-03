@@ -1,0 +1,60 @@
+﻿@model List<Models.EF.ProductCategory>
+
+<div class="categories">
+    <h3 style="background:#007bff; font-family: courier,arial,helvetica;">Danh mục Sản Phẩm</h3>
+    <ul>
+        @foreach (var item in Model.Where(x => x.IsParent == true && x.Status == true))
+        {
+            var child = Model.Where(x => x.ParentID == item.ID && x.IsParent == false);
+            var parentClass = child.Count() > 0 ? "class =dropdown-toggle data-toggle=dropdown" : "";
+            <li class="dropdown" style="display:block">
+                <a class="dropdown-toggle" data-toggle="dropdown" style="color: #000!important" href="/san-pham/@item.MetaTitle-@item.ID" @parentClass>@item.Name</a>
+                @if (child.Count() > 0)
+                {
+                    <ul class="dropdown-menu">
+                        @foreach (var childItem in child)
+                        {
+                            <li><a style="font-weight:bold;" href="/san-pham/@childItem.MetaTitle-@childItem.ID">@childItem.Name</a></li>
+                        }
+                    </ul>
+                }
+            </li>
+        }
+    </ul>
+</div>
+<!--CSS menu danh mục-->
+<style>
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+
+        .dropdown:hover {
+            background-color: #00bbff;
+        }
+
+    .dropdown-menu {
+        display: none;
+        position: absolute;
+        right: 0;
+        background-color: #00bbff;
+        z-index: 1;
+    }
+
+        .dropdown-menu a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+            .dropdown-menu a:hover {
+                background-color: #0090ff;
+                color: white;
+            }
+            
+</style>

@@ -1,0 +1,24 @@
+﻿@model List<Models.EF.Category>
+<div class="categories">
+    <h3 style="background-color:#007bff; font-family: courier,arial,helvetica; font-size:18px;">Tin tức</h3>
+    <ul>
+        @foreach (var item in Model.Where(x => x.ParentID == null))
+        {
+            var child = Model.Where(x => x.ParentID == item.ID);
+            var parentClass = child.Count() > 0 ? "class =dropdown-toggle data-toggle=dropdown" : "";
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" togg style="text-decoration:none" href="/tin-tuc1/@item.MetaTitle-@item.ID" @parentClass>@item.Name</a>
+                @if (child.Count() > 0)
+                {
+                    <ul class="dropdown-menu">
+                        @foreach (var childItem in child)
+                        {
+                            <li><a style="font-weight:bold;" href="/tin-tuc1/@childItem.MetaTitle-@childItem.ID">@childItem.Name</a></li>
+                        }
+
+                    </ul>
+                }
+            </li>
+        }
+    </ul>
+</div>

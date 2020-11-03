@@ -1,0 +1,146 @@
+﻿@model Models.EF.Contact
+@{
+    ViewBag.Title = "Liên hệ";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var session = (OnlineShop.Common.UserLogin)Session[OnlineShop.Common.CommonConstants.USER_SESSION];
+}
+<style>
+    #mapCanvas {
+        height: 600px;
+    }
+</style>
+@section jsFooter{
+    @*<script src="https://maps.googleapis.com/maps/api/js"></script>*@
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCTyOoBOu0Ryu4zXvgtGI4h3zy6qCanP90&callback=initMap"
+            type="text/javascript"></script>
+    <script src="/assets/client/js/controller/contactController.js"></script>
+    <script>
+			function initMap() {
+                var uluru = { lat: 10.801570, lng: 106.714470};
+				var map = new google.maps.Map(document.getElementById('mapCanvas'), {
+					zoom: 18,
+					center: uluru
+				});
+
+				var contentString = '@Html.Raw(Model.Content)';
+
+				var infowindow = new google.maps.InfoWindow({
+					content: contentString
+				});
+
+				var marker = new google.maps.Marker({
+					position: uluru,
+					map: map,
+					title: 'Địa chỉ'
+				});
+				marker.addListener('click', function () {
+					infowindow.open(map, marker);
+				});
+			}
+			google.maps.event.addDomListener(window, 'load', initMap);
+    </script>
+}
+<style>
+    #margin {
+        margin-top: 40px;
+    }
+</style>
+<div class="content" style="border-bottom:3px solid green">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="col-md-6">
+                <h2>Thông tin liên hệ</h2>
+                @Html.Raw(Model.Content)
+                <br />
+                @if (session == null)
+                {
+                    <p>Để gửi thông tin phản vui lòng đăng nhập <a href="/dang-nhap">tại đây.</a></p>
+                }
+                else
+                {
+                    <h2>Gửi thông tin phản hồi</h2>
+                    <form>
+                        <div class="form-group">
+                            <span class="label label-primary">Họ tên</span>
+                            <input type="text" id="txtName" class="form-control" value="@session.UserName" required />
+                        </div>
+                        <div class="form-group">
+                            <span class="label label-primary">Điện thoại</span>
+                            <input type="text" id="txtMobile" class="form-control" required />
+                        </div>
+                        <div class="form-group">
+                            <span class="label label-primary">Điện chỉ</span>
+                            <input type="text" id="txtAddress" class="form-control" required />
+                        </div>
+                        <div class="form-group">
+                            <span class="label label-primary">Email</span>
+                            <input type="text" id="txtEmail" class="form-control" required />
+                        </div>
+                        <div class="form-group">
+                            <span class="label label-primary">Nội dung</span>
+                            <br />
+                            <textarea id="txtContent" class="form-control"></textarea>
+                        </div>
+                        <button id="btnSend" class="btn btn-warning">Gửi đi</button>
+                    </form>
+                }
+            </div>
+            <div class="col-md-6">
+                <h2>Bản đồ</h2>
+                <div class="map" id="mapCanvas"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div style="background:#efcab2;margin-top: 10px">
+
+    <div class="container">
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators" style="margin-left:220px">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner" style="width:950px;">
+                <div class="item active">
+                    <div class="carousel-caption">
+                        <h1>Bill Gates</h1>
+                        <p>Mọi người sẽ không bao giờ ngó ngàng đến lòng tự trọng của bạn, điều mà họ quan tâm chính là thành tựu mà bạn đạt được. Do đó, trước khi có được những thành tựu thì bạn đừng nên quá chú trọng hay cường điệu lòng tự trọng của bản thân mình lên.</p>
+                    </div>
+                    <img src="~/assets/client/images/nencamngon.jpg" alt="Bill Gates">
+
+                </div>
+                <div class="item">
+                    <img src="~/assets/client/images/nencamngon.jpg" alt="Dr. Seuss">
+                    <div class="carousel-caption">
+                        <h1>Dr. Seuss</h1>
+                        <p>Hãy là chính mình và nói điều bạn muốn nói. Bởi những người thấy phiền lòng chẳng có ý nghĩa, và những người có ý nghĩa sẽ không thấy phiền lòng.</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="~/assets/client/images/nencamngon.jpg" alt="Denis Waitley">
+                    <div class="carousel-caption">
+                        <h1>Denis Waitley</h1>
+                        <p>Hạnh phúc là thứ không thể đến được, sở hữu được, kiếm được hay mặc vào được. Nó là trải nghiệm tinh thần của mỗi phút giây ta sống với tình yêu, vinh dự và lòng biết ơn.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="~/Scripts/jquery-1.11.1.min.js"></script>
+<!--Tạo hiệu ứng Slide bằng JQUERY-->
+<script>
+    $('#myCarousel').carousel({
+        interval: 4000
+    });
+</script>
+<!--bootstrap slide châm ngôn-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
+<!--Liên hệ-->
+<div style="margin-top:30px;">
+
+    <h2 style="font-size:25px;text-align:center">	<a href="/Lien-he">Mọi chi tiết xin liên hệ tại đây</a></h2>
+</div>

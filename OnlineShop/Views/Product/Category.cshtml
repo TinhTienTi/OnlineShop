@@ -1,0 +1,135 @@
+﻿@model List<Models.EF.Product>
+@{
+    var category = (Models.EF.ProductCategory)ViewBag.Category;
+    ViewBag.Title = category.Name;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link href="~/assets/client/css/style.css" rel="stylesheet" />
+@section slide{
+
+}
+<div class="content">
+    <div class="content_top">
+        <div class="heading">
+            <h3 style="color:blue;">@category.Name</h3>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="section group">
+                @foreach (var item in Model)
+                {
+                    var url = "/chi-tiet/" + item.MetaTitle + "-" + item.ID;
+                    <div class="col-md-3">
+                        <div class="thumbnail"style="height: 250px; width: 250px;">
+                            @if (item.Status == true)
+                            {
+                                <div class="caption">
+                                    <h4>@item.Name</h4><br />
+                                   
+                                    <p>
+                                        <a href="@url" class="btn btn-danger" rel="tooltip" title="" data-original-title="Xem chi tiết">Xem</a>
+                                        @if (item.Quantity > 0)
+                                        {
+                                            <a href="/them-gio-hang?productId=@item.ID&quantity=1" class="btn btn-success" rel="tooltip" data-original-title="Mua hàng">Mua</a>
+                                        }
+                                    </p>
+                                </div> <a href="@url"><img src="@item.Image" alt="@item.Name" /></a>
+                            }
+                        </div>
+                    </div>
+                }
+                <div class="clear"></div>
+                <!--Phân trang-->
+                @if (ViewBag.TotalPage > 1)
+                {
+                    var pageDisplay = (int)ViewBag.MaxPage;
+                    int totalPage = (int)ViewBag.TotalPage;
+                    int currentPage = ((int)ViewBag.Page);
+
+                    // Create numeric links
+                    var startPageIndex = Math.Max(1, currentPage - pageDisplay / 2);
+                    var endPageIndex = Math.Min(totalPage, currentPage + pageDisplay / 2);
+
+                    var link = "/san-pham/" + category.MetaTitle + "-" + category.ID;
+                    <nav>
+                        <ul class="pagination">
+                            @if (currentPage > ViewBag.First)
+                            {
+                                <li><a href="@link?page=@ViewBag.First" title="Trang đầu" class="first"><i class="fa fa-angle-double-left"></i></a></li>
+                                <li>
+                                    <a href="@link?page=@ViewBag.Prev" title="Trang trước" class="prev"><i class="fa fa-angle-left"></i></a>
+                                </li>
+
+                            }
+                            @for (int i = startPageIndex; i <= endPageIndex; i++)
+                            {
+                                if (currentPage == i)
+                                {
+
+                                    <li> <a href="@link?page=@i" class="active" title="Trang @i">@i</a></li>
+                                }
+                                else
+                                {
+                                    <li><a href="@link?page=@i" title="Trang @i" class="pos">@i</a></li>
+                                }
+                            }
+                            @if (currentPage < totalPage)
+                            {
+                                <li><a href="@link?page=@ViewBag.Next" class="next" title="Trang sau"><i class="fa fa-angle-right"></i></a></li>
+                                <li> <a href="@link?page=@ViewBag.Last" class="last" title="Trang cuối"><i class="fa fa-angle-double-right"></i></a></li>
+                            }
+
+                        </ul>
+                    </nav>
+
+                }
+                else
+                {
+                    <br />
+                    <span class="alert alert-danger">Cửa hàng hiện đang cập nhật sản phẩm</span>
+                    <br />
+                    <br />
+                }
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<style type="text/css">
+    .thumbnail {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .caption {
+        position: absolute;
+        top: 0;
+        right: 0;
+        background: rgba(66, 139, 202, 0.75);
+        width: 100%;
+        height: 100%;
+        padding: 2%;
+        display: none;
+        text-align: center;
+        color: #fff !important;
+        z-index: 2;
+    }
+</style>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("[rel='tooltip']").tooltip();
+        $('.thumbnail').hover(
+            function () {
+                $(this).find('.caption').slideDown(250); //.fadeIn(250)
+            },
+            function () {
+                $(this).find('.caption').slideUp(250); //.fadeOut(205)
+            }
+        );
+    });
+</script>

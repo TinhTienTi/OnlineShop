@@ -1,0 +1,39 @@
+﻿<link href="~/assets/client/phone/phone.css" rel="stylesheet" />
+
+
+<script>
+    $(document).ready(function () {
+        $('.user-support').click(function (event) {
+            $('.social-button-content').slideToggle();
+        });
+    });
+</script>
+<style>
+    #fa {
+        background: rgba(71, 88, 245, 1);
+    }
+</style>
+<div class="social-button">
+    <div class="social-button-content">
+        <a href="tel:0939113113" class="call-icon" rel="nofollow">
+            <img src="~/assets/client/images/phone32px.png" width="32" height="32" />
+            <span>Hotline: 0939.113.113</span>
+        </a>
+        <a href="sms:0939114    114" class="sms">
+            <img src="~/assets/client/images/sms-32px.png" id="sms" width="32" height="32" />
+            <span>SMS: 0939.114.114</span>
+        </a>
+        <a href="https://www.facebook.com/Antonio1998.Carlos/" class="mes">
+            <img src="~/assets/client/images/facebook-square-brands-32px.png" width="32" height="32" />
+            <span>Nhắn tin Facebook</span>
+        </a>
+    </div>
+    <a class="user-support" data-original-title>
+        <img src="~/assets/client/images/info24h32px.png" width="32" height="32" />
+        <div class="animated alo-circle"></div>
+        <div class="animated alo-circle-fill "></div>
+    </a>
+</div>
+
+@model Models.EF.Footer
+@Html.Raw(Model.Content)

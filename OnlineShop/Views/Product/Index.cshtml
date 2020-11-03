@@ -1,0 +1,122 @@
+﻿@{
+    ViewBag.Title = "Trang Chủ";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var listProducts = (List<Models.EF.Product>)ViewBag.ListProduct;
+}
+<!--Link javascrip-->
+<script src="~/Scripts/jquery.signalR-1.0.0.min.js"></script>
+<script src="@Url.Content("~/signalr/hubs")"></script>
+<script>
+    $(function () {
+        var counterhub = $.connection.counterHub;
+        $.connection.hub.start().done(function () {
+        });
+
+        counterhub.client.updatecounter = function (count) {
+            $("#counter").text(count);
+        }
+    });
+</script>
+<style type="text/css">
+    .thumbnail {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .caption {
+        position: absolute;
+        top: 0;
+        right: 0;
+        background: rgba(66, 139, 202, 0.75);
+        width: 100%;
+        height: 100%;
+        padding: 2%;
+        display: none;
+        text-align: center;
+        color: #fff !important;
+        z-index: 2;
+    }
+
+    .text {
+        font-weight: bold;
+        color: blue;
+        font-size: 20px;
+    }
+
+    * {
+        font-family: GoogleSans, sans-serif !important;
+        letter-spacing: 0 !important;
+    }
+</style>
+<br />
+<div class="content">
+    <div>
+        <label style="float:right;">Xếp xeo theo: </label>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="section group">
+                @foreach (var item in listProducts)
+                {
+                    var link = "/chi-tiet/" + item.MetaTitle + "-" + item.ID;
+                    <div class="grid_1_of_4 images_1_of_4">
+                        <a href="@link"><img src="@item.Image" alt="" /></a>
+                        <hr />
+                        <h2>@item.Name</h2>
+                        <div class="price-details">
+                            <div class="price-number">
+                                @if (item.PromotionPrice != null)
+                                {
+                                    <p><span style="color:red; font-size: 18px;">@(item.PromotionPrice.HasValue ? item.PromotionPrice.Value.ToString("N0") : "Liên Hệ")</span> <span style="color:red; font-style:italic; padding-left: 15px;">@(item.Quantity > 0 ? "Còn hàng" : "Tạm hết hàng")</span></p>
+                                    var @num = Math.Round(Convert.ToDouble(@item.PromotionPrice / @item.Price * 100), 1);
+                                    <p> <span style="font-size:16px; margin-top: 0px; font-weight:bold; color:white; background-color:orange; border-radius: 5px;"> @Math.Round(num - 100, 1) %</span> <span>Giá niêm yết: @item.Price.Value.ToString("N0")</span> </p>
+                                }
+                                else
+                                {
+                                    <p><span class="rupees" style="color:red; font-size: 18px;">@(item.Price.HasValue ? item.Price.Value.ToString("N0") : "Liên hệ")</span> <span style="color:red; font-style:italic; padding-left: 15px;">@(item.Quantity > 0 ? "Còn hàng" : "Tạm hết hàng")</span></p>
+                                }
+                            </div>
+                            <div class="add-cart">
+                                <p>
+                                    <a href="@link" class="btn btn-danger" rel="tooltip" title="" data-original-title="Xem chi tiết">Xem</a>
+                                    @if (item.Quantity > 0)
+                                    {
+                                        <a href="/them-gio-hang?productId=@item.ID&quantity=1" class="btn btn-success" rel="tooltip" title="" data-original-title="Mua hàng">Mua</a>
+                                    }
+                                </p>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="~/Scripts/jquery-1.11.1.min.js"></script>
+<!--Tạo hiệu ứng Slide bằng JQUERY-->
+<script>
+    $(document).ready(function () {
+        $("[rel='tooltip']").tooltip();
+        $('.thumbnail').hover(
+            function () {
+                $(this).find('.caption').slideDown(250);
+            },
+            function () {
+                $(this).find('.caption').slideUp(250);
+            }
+        );
+    });
+    $('#myCarousel').carousel({
+        interval: 4000
+    });
+</script>
+<!--bootstrap slide châm ngôn-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
+<!--Liên hệ-->
+<div style="margin-top:30px;">
+    <h2 style="font-size:25px;text-align:center">	<a href="/Lien-he">Mọi chi tiết xin liên hệ tại đây</a></h2>
+</div>

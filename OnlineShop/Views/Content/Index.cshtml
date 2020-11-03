@@ -1,0 +1,131 @@
+﻿@model IEnumerable<Models.EF.Content>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    * {
+        font-family: GoogleSans, sans-serif !important;
+        letter-spacing: 0 !important;
+    }
+</style>
+
+<div class="content">
+    <div class="content_top">
+        <div class="heading">
+            <h3>Tin tức</h3>
+        </div>
+        <div class="see"></div>
+        <div class="clear"></div>
+    </div>
+    @foreach (var item in Model)
+    {
+        <div class="image group">
+            <div class="grid images_3_of_1">
+                <a href="/tin-tuc/@item.MetaTitle-@item.ID"><img src="@item.Image" alt="" width="200" /></a>
+            </div>
+            <div class="grid news_desc">
+                <h3><a href="/tin-tuc/@item.MetaTitle-@item.ID">@item.Name </a></h3>
+                <h4>Posted on @item.CreatedDate by <span><a href="#">@item.CreatedBy</a></span></h4>
+                @item.Description
+            </div>
+        </div>
+    }
+
+</div>
+@if (ViewBag.TotalPage > 1)
+{
+    var pageDisplay = (int)ViewBag.MaxPage;
+    int totalPage = (int)ViewBag.TotalPage;
+    int currentPage = ((int)ViewBag.Page);
+
+    // Create numeric links
+    var startPageIndex = Math.Max(1, currentPage - pageDisplay / 2);
+    var endPageIndex = Math.Min(totalPage, currentPage + pageDisplay / 2);
+
+    var link = "/tin-tuc";
+    <nav>
+        <ul class="pagination">
+            @if (currentPage > ViewBag.First)
+            {
+                <li><a href="@link?page=@ViewBag.First" title="Trang đầu" class="first"><i class="fa fa-angle-double-left"></i></a></li>
+                <li>
+                    <a href="@link?page=@ViewBag.Prev" title="Trang trước" class="prev"><i class="fa fa-angle-left"></i></a>
+                </li>
+
+            }
+            @for (int i = startPageIndex; i <= endPageIndex; i++)
+            {
+                if (currentPage == i)
+                {
+
+                    <li> <a href="@link?page=@i" class="active" title="Trang @i">@i</a></li>
+                }
+                else
+                {
+                    <li><a href="@link?page=@i" title="Trang @i" class="pos">@i</a></li>
+                }
+            }
+            @if (currentPage < totalPage)
+            {
+                <li><a href="@link?page=@ViewBag.Next" class="next" title="Trang sau"><i class="fa fa-angle-right"></i></a></li>
+                <li> <a href="@link?page=@ViewBag.Last" class="last" title="Trang cuối"><i class="fa fa-angle-double-right"></i></a></li>
+            }
+
+        </ul>
+    </nav>
+
+}
+<div style="background:#efcab2;margin-top: 10px">
+
+    <div class="container">
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators" style="margin-left:220px">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner" style="width:950px;">
+                <div class="item active">
+                    <div class="carousel-caption">
+                        <h1>Bill Gates</h1>
+                        <p>Mọi người sẽ không bao giờ ngó ngàng đến lòng tự trọng của bạn, điều mà họ quan tâm chính là thành tựu mà bạn đạt được. Do đó, trước khi có được những thành tựu thì bạn đừng nên quá chú trọng hay cường điệu lòng tự trọng của bản thân mình lên.</p>
+                    </div>
+                    <img src="~/assets/client/images/nencamngon.jpg" alt="Bill Gates">
+
+                </div>
+                <div class="item">
+                    <img src="~/assets/client/images/nencamngon.jpg" alt="Dr. Seuss">
+                    <div class="carousel-caption">
+                        <h1>Dr. Seuss</h1>
+                        <p>Hãy là chính mình và nói điều bạn muốn nói. Bởi những người thấy phiền lòng chẳng có ý nghĩa, và những người có ý nghĩa sẽ không thấy phiền lòng.</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="~/assets/client/images/nencamngon.jpg" alt="Denis Waitley">
+                    <div class="carousel-caption">
+                        <h1>Denis Waitley</h1>
+                        <p>Hạnh phúc là thứ không thể đến được, sở hữu được, kiếm được hay mặc vào được. Nó là trải nghiệm tinh thần của mỗi phút giây ta sống với tình yêu, vinh dự và lòng biết ơn.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="~/Scripts/jquery-1.11.1.min.js"></script>
+<!--Tạo hiệu ứng Slide bằng JQUERY-->
+<script>
+    $('#myCarousel').carousel({
+        interval: 4000
+    });
+</script>
+<!--bootstrap slide châm ngôn-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
+<!--Liên hệ-->
+<div style="margin-top:30px;">
+
+    <h2 style="font-size:25px;text-align:center">	<a href="/Lien-he">Mọi chi tiết xin liên hệ tại đây</a></h2>
+</div>

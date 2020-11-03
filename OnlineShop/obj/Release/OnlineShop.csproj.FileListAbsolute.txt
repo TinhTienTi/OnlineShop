@@ -1,0 +1,138 @@
+C:\Users\USER\Desktop\đồ án\OnlineShop\OnlineShop\OnlineShop\OnlineShop\bin\OnlineShop.dll.config
+C:\Users\USER\Desktop\đồ án\OnlineShop\OnlineShop\OnlineShop\OnlineShop\bin\OnlineShop.dll
+C:\Users\USER\Desktop\đồ án\OnlineShop\OnlineShop\OnlineShop\OnlineShop\bin\OnlineShop.pdb
+C:\Users\USER\Desktop\đồ án\OnlineShop\OnlineShop\OnlineShop\OnlineShop\bin\BotDetect.dll
+C:\Users\USER\Desktop\đồ án\OnlineShop\OnlineShop\OnlineShop\OnlineShop\bin\BotDetect.Web.Mvc.dll
+C:\Users\USER\Desktop\đồ án\OnlineShop\OnlineShop\OnlineShop\OnlineShop\bin\CKFinder.dll
+C:\Users\USER\Desktop\đồ án\OnlineShop\OnlineShop\OnlineShop\OnlineShop\bin\Common.dll
+C:\Users\USER\Desktop\đồ án\OnlineShop\OnlineShop\OnlineShop\OnlineShop\bin\EntityFramework.dll
+C:\Users\USER\Desktop\đồ án\OnlineShop\OnlineShop\OnlineShop\OnlineShop\bin\EntityFramework.SqlServer.dll
+C:\Users\USER\Desktop\đồ án\OnlineShop\OnlineShop\OnlineShop\OnlineShop\bin\Facebook.dll
+C:\Users\USER\Desktop\đồ án\OnlineShop\OnlineShop\OnlineShop\OnlineShop\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\USER\Desktop\đồ án\OnlineShop\OnlineShop\OnlineShop\OnlineShop\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+C:\Users\USER\Desktop\đồ án\OnlineShop\OnlineShop\OnlineShop\OnlineShop\bin\Models.dll
+C:\Users\USER\Desktop\đồ án\OnlineShop\OnlineShop\OnlineShop\OnlineShop\bin\Newtonsoft.Json.dll
+C:\Users\USER\Desktop\đồ án\OnlineShop\OnlineShop\OnlineShop\OnlineShop\bin\PagedList.dll
+C:\Users\USER\Desktop\đồ án\OnlineShop\OnlineShop\OnlineShop\OnlineShop\bin\PagedList.Mvc.dll
+C:\Users\USER\Desktop\đồ án\OnlineShop\OnlineShop\OnlineShop\OnlineShop\bin\System.Net.Http.Formatting.dll
+C:\Users\USER\Desktop\đồ án\OnlineShop\OnlineShop\OnlineShop\OnlineShop\bin\System.Web.Helpers.dll
+C:\Users\USER\Desktop\đồ án\OnlineShop\OnlineShop\OnlineShop\OnlineShop\bin\System.Web.Http.dll
+C:\Users\USER\Desktop\đồ án\OnlineShop\OnlineShop\OnlineShop\OnlineShop\bin\System.Web.Http.WebHost.dll
+C:\Users\USER\Desktop\đồ án\OnlineShop\OnlineShop\OnlineShop\OnlineShop\bin\System.Web.Mvc.dll
+C:\Users\USER\Desktop\đồ án\OnlineShop\OnlineShop\OnlineShop\OnlineShop\bin\System.Web.Razor.dll
+C:\Users\USER\Desktop\đồ án\OnlineShop\OnlineShop\OnlineShop\OnlineShop\bin\System.Web.WebPages.Deployment.dll
+C:\Users\USER\Desktop\đồ án\OnlineShop\OnlineShop\OnlineShop\OnlineShop\bin\System.Web.WebPages.dll
+C:\Users\USER\Desktop\đồ án\OnlineShop\OnlineShop\OnlineShop\OnlineShop\bin\System.Web.WebPages.Razor.dll
+C:\Users\USER\Desktop\đồ án\OnlineShop\OnlineShop\OnlineShop\OnlineShop\bin\Common.pdb
+C:\Users\USER\Desktop\đồ án\OnlineShop\OnlineShop\OnlineShop\OnlineShop\bin\Models.pdb
+C:\Users\USER\Desktop\đồ án\OnlineShop\OnlineShop\OnlineShop\OnlineShop\bin\CKFinder.pdb
+C:\Users\USER\Desktop\đồ án\OnlineShop\OnlineShop\OnlineShop\OnlineShop\bin\EntityFramework.xml
+C:\Users\USER\Desktop\đồ án\OnlineShop\OnlineShop\OnlineShop\OnlineShop\bin\EntityFramework.SqlServer.xml
+C:\Users\USER\Desktop\đồ án\OnlineShop\OnlineShop\OnlineShop\OnlineShop\bin\Facebook.xml
+C:\Users\USER\Desktop\đồ án\OnlineShop\OnlineShop\OnlineShop\OnlineShop\bin\Newtonsoft.Json.xml
+C:\Users\USER\Desktop\đồ án\OnlineShop\OnlineShop\OnlineShop\OnlineShop\bin\PagedList.xml
+C:\Users\USER\Desktop\đồ án\OnlineShop\OnlineShop\OnlineShop\OnlineShop\bin\PagedList.Mvc.xml
+C:\Users\USER\Desktop\đồ án\OnlineShop\OnlineShop\OnlineShop\OnlineShop\bin\System.Web.Razor.xml
+C:\Users\USER\Desktop\đồ án\OnlineShop\OnlineShop\OnlineShop\OnlineShop\bin\System.Net.Http.Formatting.xml
+C:\Users\USER\Desktop\đồ án\OnlineShop\OnlineShop\OnlineShop\OnlineShop\bin\System.Web.Helpers.xml
+C:\Users\USER\Desktop\đồ án\OnlineShop\OnlineShop\OnlineShop\OnlineShop\bin\System.Web.Http.xml
+C:\Users\USER\Desktop\đồ án\OnlineShop\OnlineShop\OnlineShop\OnlineShop\bin\System.Web.Http.WebHost.xml
+C:\Users\USER\Desktop\đồ án\OnlineShop\OnlineShop\OnlineShop\OnlineShop\bin\System.Web.Mvc.xml
+C:\Users\USER\Desktop\đồ án\OnlineShop\OnlineShop\OnlineShop\OnlineShop\bin\System.Web.WebPages.xml
+C:\Users\USER\Desktop\đồ án\OnlineShop\OnlineShop\OnlineShop\OnlineShop\bin\System.Web.WebPages.Deployment.xml
+C:\Users\USER\Desktop\đồ án\OnlineShop\OnlineShop\OnlineShop\OnlineShop\bin\System.Web.WebPages.Razor.xml
+C:\Users\USER\Desktop\đồ án\OnlineShop\OnlineShop\OnlineShop\OnlineShop\obj\Release\OnlineShop.csprojResolveAssemblyReference.cache
+C:\Users\USER\Desktop\đồ án\OnlineShop\OnlineShop\OnlineShop\OnlineShop\obj\Release\OnlineShop.dll
+C:\Users\USER\Desktop\đồ án\OnlineShop\OnlineShop\OnlineShop\OnlineShop\obj\Release\OnlineShop.pdb
+B:\OnlineShop\OnlineShop\bin\OnlineShop.dll.config
+B:\OnlineShop\OnlineShop\bin\OnlineShop.dll
+B:\OnlineShop\OnlineShop\bin\OnlineShop.pdb
+B:\OnlineShop\OnlineShop\bin\BotDetect.dll
+B:\OnlineShop\OnlineShop\bin\BotDetect.Web.Mvc.dll
+B:\OnlineShop\OnlineShop\bin\CKFinder.dll
+B:\OnlineShop\OnlineShop\bin\Common.dll
+B:\OnlineShop\OnlineShop\bin\EntityFramework.dll
+B:\OnlineShop\OnlineShop\bin\EntityFramework.SqlServer.dll
+B:\OnlineShop\OnlineShop\bin\Facebook.dll
+B:\OnlineShop\OnlineShop\bin\Microsoft.Web.Infrastructure.dll
+B:\OnlineShop\OnlineShop\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+B:\OnlineShop\OnlineShop\bin\Models.dll
+B:\OnlineShop\OnlineShop\bin\Newtonsoft.Json.dll
+B:\OnlineShop\OnlineShop\bin\PagedList.dll
+B:\OnlineShop\OnlineShop\bin\PagedList.Mvc.dll
+B:\OnlineShop\OnlineShop\bin\System.Net.Http.Formatting.dll
+B:\OnlineShop\OnlineShop\bin\System.Web.Helpers.dll
+B:\OnlineShop\OnlineShop\bin\System.Web.Http.dll
+B:\OnlineShop\OnlineShop\bin\System.Web.Http.WebHost.dll
+B:\OnlineShop\OnlineShop\bin\System.Web.Mvc.dll
+B:\OnlineShop\OnlineShop\bin\System.Web.Razor.dll
+B:\OnlineShop\OnlineShop\bin\System.Web.WebPages.Deployment.dll
+B:\OnlineShop\OnlineShop\bin\System.Web.WebPages.dll
+B:\OnlineShop\OnlineShop\bin\System.Web.WebPages.Razor.dll
+B:\OnlineShop\OnlineShop\bin\Common.pdb
+B:\OnlineShop\OnlineShop\bin\Models.pdb
+B:\OnlineShop\OnlineShop\bin\CKFinder.pdb
+B:\OnlineShop\OnlineShop\bin\EntityFramework.xml
+B:\OnlineShop\OnlineShop\bin\EntityFramework.SqlServer.xml
+B:\OnlineShop\OnlineShop\bin\Facebook.xml
+B:\OnlineShop\OnlineShop\bin\Newtonsoft.Json.xml
+B:\OnlineShop\OnlineShop\bin\PagedList.xml
+B:\OnlineShop\OnlineShop\bin\PagedList.Mvc.xml
+B:\OnlineShop\OnlineShop\bin\System.Web.Razor.xml
+B:\OnlineShop\OnlineShop\bin\System.Net.Http.Formatting.xml
+B:\OnlineShop\OnlineShop\bin\System.Web.Helpers.xml
+B:\OnlineShop\OnlineShop\bin\System.Web.Http.xml
+B:\OnlineShop\OnlineShop\bin\System.Web.Http.WebHost.xml
+B:\OnlineShop\OnlineShop\bin\System.Web.Mvc.xml
+B:\OnlineShop\OnlineShop\bin\System.Web.WebPages.xml
+B:\OnlineShop\OnlineShop\bin\System.Web.WebPages.Deployment.xml
+B:\OnlineShop\OnlineShop\bin\System.Web.WebPages.Razor.xml
+B:\OnlineShop\OnlineShop\obj\Release\OnlineShop.csprojResolveAssemblyReference.cache
+B:\OnlineShop\OnlineShop\obj\Release\OnlineShop.dll
+B:\OnlineShop\OnlineShop\obj\Release\OnlineShop.pdb
+C:\Users\Hieu\Desktop\ASP.NET\OnlineShop\OnlineShop\OnlineShop\bin\OnlineShop.dll.config
+C:\Users\Hieu\Desktop\ASP.NET\OnlineShop\OnlineShop\OnlineShop\bin\OnlineShop.dll
+C:\Users\Hieu\Desktop\ASP.NET\OnlineShop\OnlineShop\OnlineShop\bin\OnlineShop.pdb
+C:\Users\Hieu\Desktop\ASP.NET\OnlineShop\OnlineShop\OnlineShop\bin\BotDetect.dll
+C:\Users\Hieu\Desktop\ASP.NET\OnlineShop\OnlineShop\OnlineShop\bin\BotDetect.Web.Mvc.dll
+C:\Users\Hieu\Desktop\ASP.NET\OnlineShop\OnlineShop\OnlineShop\bin\CKFinder.dll
+C:\Users\Hieu\Desktop\ASP.NET\OnlineShop\OnlineShop\OnlineShop\bin\Common.dll
+C:\Users\Hieu\Desktop\ASP.NET\OnlineShop\OnlineShop\OnlineShop\bin\EntityFramework.dll
+C:\Users\Hieu\Desktop\ASP.NET\OnlineShop\OnlineShop\OnlineShop\bin\EntityFramework.SqlServer.dll
+C:\Users\Hieu\Desktop\ASP.NET\OnlineShop\OnlineShop\OnlineShop\bin\Facebook.dll
+C:\Users\Hieu\Desktop\ASP.NET\OnlineShop\OnlineShop\OnlineShop\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Hieu\Desktop\ASP.NET\OnlineShop\OnlineShop\OnlineShop\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+C:\Users\Hieu\Desktop\ASP.NET\OnlineShop\OnlineShop\OnlineShop\bin\Models.dll
+C:\Users\Hieu\Desktop\ASP.NET\OnlineShop\OnlineShop\OnlineShop\bin\Newtonsoft.Json.dll
+C:\Users\Hieu\Desktop\ASP.NET\OnlineShop\OnlineShop\OnlineShop\bin\PagedList.dll
+C:\Users\Hieu\Desktop\ASP.NET\OnlineShop\OnlineShop\OnlineShop\bin\PagedList.Mvc.dll
+C:\Users\Hieu\Desktop\ASP.NET\OnlineShop\OnlineShop\OnlineShop\bin\System.Net.Http.Formatting.dll
+C:\Users\Hieu\Desktop\ASP.NET\OnlineShop\OnlineShop\OnlineShop\bin\System.Web.Helpers.dll
+C:\Users\Hieu\Desktop\ASP.NET\OnlineShop\OnlineShop\OnlineShop\bin\System.Web.Http.dll
+C:\Users\Hieu\Desktop\ASP.NET\OnlineShop\OnlineShop\OnlineShop\bin\System.Web.Http.WebHost.dll
+C:\Users\Hieu\Desktop\ASP.NET\OnlineShop\OnlineShop\OnlineShop\bin\System.Web.Mvc.dll
+C:\Users\Hieu\Desktop\ASP.NET\OnlineShop\OnlineShop\OnlineShop\bin\System.Web.Razor.dll
+C:\Users\Hieu\Desktop\ASP.NET\OnlineShop\OnlineShop\OnlineShop\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Hieu\Desktop\ASP.NET\OnlineShop\OnlineShop\OnlineShop\bin\System.Web.WebPages.dll
+C:\Users\Hieu\Desktop\ASP.NET\OnlineShop\OnlineShop\OnlineShop\bin\System.Web.WebPages.Razor.dll
+C:\Users\Hieu\Desktop\ASP.NET\OnlineShop\OnlineShop\OnlineShop\bin\Common.pdb
+C:\Users\Hieu\Desktop\ASP.NET\OnlineShop\OnlineShop\OnlineShop\bin\Models.pdb
+C:\Users\Hieu\Desktop\ASP.NET\OnlineShop\OnlineShop\OnlineShop\bin\CKFinder.pdb
+C:\Users\Hieu\Desktop\ASP.NET\OnlineShop\OnlineShop\OnlineShop\bin\EntityFramework.xml
+C:\Users\Hieu\Desktop\ASP.NET\OnlineShop\OnlineShop\OnlineShop\bin\EntityFramework.SqlServer.xml
+C:\Users\Hieu\Desktop\ASP.NET\OnlineShop\OnlineShop\OnlineShop\bin\Facebook.xml
+C:\Users\Hieu\Desktop\ASP.NET\OnlineShop\OnlineShop\OnlineShop\bin\Newtonsoft.Json.xml
+C:\Users\Hieu\Desktop\ASP.NET\OnlineShop\OnlineShop\OnlineShop\bin\PagedList.xml
+C:\Users\Hieu\Desktop\ASP.NET\OnlineShop\OnlineShop\OnlineShop\bin\PagedList.Mvc.xml
+C:\Users\Hieu\Desktop\ASP.NET\OnlineShop\OnlineShop\OnlineShop\bin\System.Web.Razor.xml
+C:\Users\Hieu\Desktop\ASP.NET\OnlineShop\OnlineShop\OnlineShop\bin\System.Net.Http.Formatting.xml
+C:\Users\Hieu\Desktop\ASP.NET\OnlineShop\OnlineShop\OnlineShop\bin\System.Web.Helpers.xml
+C:\Users\Hieu\Desktop\ASP.NET\OnlineShop\OnlineShop\OnlineShop\bin\System.Web.Http.xml
+C:\Users\Hieu\Desktop\ASP.NET\OnlineShop\OnlineShop\OnlineShop\bin\System.Web.Http.WebHost.xml
+C:\Users\Hieu\Desktop\ASP.NET\OnlineShop\OnlineShop\OnlineShop\bin\System.Web.Mvc.xml
+C:\Users\Hieu\Desktop\ASP.NET\OnlineShop\OnlineShop\OnlineShop\bin\System.Web.WebPages.xml
+C:\Users\Hieu\Desktop\ASP.NET\OnlineShop\OnlineShop\OnlineShop\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Hieu\Desktop\ASP.NET\OnlineShop\OnlineShop\OnlineShop\bin\System.Web.WebPages.Razor.xml
+C:\Users\Hieu\Desktop\ASP.NET\OnlineShop\OnlineShop\OnlineShop\obj\Release\OnlineShop.csprojResolveAssemblyReference.cache
+C:\Users\Hieu\Desktop\ASP.NET\OnlineShop\OnlineShop\OnlineShop\obj\Release\OnlineShop.dll
+C:\Users\Hieu\Desktop\ASP.NET\OnlineShop\OnlineShop\OnlineShop\obj\Release\OnlineShop.pdb

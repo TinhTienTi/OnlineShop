@@ -1,0 +1,465 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="About_Description" xml:space="preserve">
+    <value>Mô tả</value>
+  </data>
+  <data name="About_Detail" xml:space="preserve">
+    <value>Chi tiết</value>
+  </data>
+  <data name="About_Image" xml:space="preserve">
+    <value>Hình ảnh</value>
+  </data>
+  <data name="About_MetaDescriptions" xml:space="preserve">
+    <value>Mô tả giới thiệu</value>
+  </data>
+  <data name="About_MetaKeywords" xml:space="preserve">
+    <value>Từ khoá</value>
+  </data>
+  <data name="About_MetaTitle" xml:space="preserve">
+    <value>Tiêu đề</value>
+  </data>
+  <data name="About_Name" xml:space="preserve">
+    <value>Tên </value>
+  </data>
+  <data name="About_Status" xml:space="preserve">
+    <value>Trạng thái</value>
+  </data>
+  <data name="Accountnamerequired" xml:space="preserve">
+    <value>Tên tài khoản bắt buộc</value>
+  </data>
+  <data name="Addaccountsuccessfully" xml:space="preserve">
+    <value>Thêm tài khoản thành công</value>
+  </data>
+  <data name="Addfailed" xml:space="preserve">
+    <value>Thêm không thành công</value>
+  </data>
+  <data name="Addingaccountfailed" xml:space="preserve">
+    <value>Thêm tài khoản không thành công</value>
+  </data>
+  <data name="Addmenusuccessfully" xml:space="preserve">
+    <value>Thêm menu thành công</value>
+  </data>
+  <data name="Addproductfailed" xml:space="preserve">
+    <value>Thêm sản phẩm không thành công</value>
+  </data>
+  <data name="Addproductsuccessfully" xml:space="preserve">
+    <value>Thêm sản phẩm thành công</value>
+  </data>
+  <data name="Addproducttypefailed" xml:space="preserve">
+    <value>Thêm loại sản phẩm không thành công</value>
+  </data>
+  <data name="AddSlidesuccessfully" xml:space="preserve">
+    <value>Thêm slide thành công</value>
+  </data>
+  <data name="Addsuccessfulnewscategories" xml:space="preserve">
+    <value>Thêm loại tin tức thành công</value>
+  </data>
+  <data name="Addsuccessfulproductcategories" xml:space="preserve">
+    <value>Thêm loại sản phẩm thành công</value>
+  </data>
+  <data name="Category_DisplayOrder" xml:space="preserve">
+    <value>Thứ tự</value>
+  </data>
+  <data name="Category_MetaDescriptions" xml:space="preserve">
+    <value>Mô tả</value>
+  </data>
+  <data name="Category_MetaKeywords" xml:space="preserve">
+    <value>Từ khoá</value>
+  </data>
+  <data name="Category_MetaTitle" xml:space="preserve">
+    <value>Alias</value>
+  </data>
+  <data name="Category_Name" xml:space="preserve">
+    <value>Tên danh mục</value>
+  </data>
+  <data name="Category_ParentID" xml:space="preserve">
+    <value>Danh mục </value>
+  </data>
+  <data name="Category_SeoTitle" xml:space="preserve">
+    <value>Tiêu đề seo</value>
+  </data>
+  <data name="Category_ShowOnHome" xml:space="preserve">
+    <value>Hiển thị trang chủ</value>
+  </data>
+  <data name="Category_Status" xml:space="preserve">
+    <value>Trạng thái</value>
+  </data>
+  <data name="Content_CategoryID" xml:space="preserve">
+    <value>Mã danh mục</value>
+  </data>
+  <data name="Content_Description" xml:space="preserve">
+    <value>Mô tả tin tức</value>
+  </data>
+  <data name="Content_Detail" xml:space="preserve">
+    <value>Chi tiết</value>
+  </data>
+  <data name="Content_Image" xml:space="preserve">
+    <value>Hình ảnh</value>
+  </data>
+  <data name="Content_MetaDescriptions" xml:space="preserve">
+    <value>Mô tả</value>
+  </data>
+  <data name="Content_MetaKeywords" xml:space="preserve">
+    <value>Từ khoá tin tức</value>
+  </data>
+  <data name="Content_MetaTitle" xml:space="preserve">
+    <value>Tiêu đề</value>
+  </data>
+  <data name="Content_Name" xml:space="preserve">
+    <value>Tên nội dung</value>
+  </data>
+  <data name="Content_Status" xml:space="preserve">
+    <value>Trạng thái</value>
+  </data>
+  <data name="Content_TopHot" xml:space="preserve">
+    <value>Tin nóng</value>
+  </data>
+  <data name="Content_ViewCount" xml:space="preserve">
+    <value>Lượt xem</value>
+  </data>
+  <data name="Content_Warranty" xml:space="preserve">
+    <value>Bảo hành</value>
+  </data>
+  <data name="Deletesuccessful" xml:space="preserve">
+    <value>Xoá thành công</value>
+  </data>
+  <data name="English" xml:space="preserve">
+    <value>Tiêng Anh</value>
+  </data>
+  <data name="MenuType_Name" xml:space="preserve">
+    <value>Tên loại danh mục</value>
+  </data>
+  <data name="Menu_DisplayOrder" xml:space="preserve">
+    <value>Thứ tự</value>
+  </data>
+  <data name="Menu_Link" xml:space="preserve">
+    <value>Liên kết</value>
+  </data>
+  <data name="Menu_Status" xml:space="preserve">
+    <value>Trạng thái</value>
+  </data>
+  <data name="Menu_Target" xml:space="preserve">
+    <value>Mục tiêu</value>
+  </data>
+  <data name="Menu_Text" xml:space="preserve">
+    <value>Văn bản</value>
+  </data>
+  <data name="Menu_TypeID" xml:space="preserve">
+    <value>Mã loại</value>
+  </data>
+  <data name="Nametypeofnewsrequired" xml:space="preserve">
+    <value>Tên loại tin tức bắt buộc</value>
+  </data>
+  <data name="Order_CustomerID" xml:space="preserve">
+    <value>Mã khách hàng</value>
+  </data>
+  <data name="Order_ShipAddress" xml:space="preserve">
+    <value>Địa chỉ</value>
+  </data>
+  <data name="Order_ShipEmail" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="Order_ShipMobile" xml:space="preserve">
+    <value>SĐT đặt hàng</value>
+  </data>
+  <data name="Order_ShipName" xml:space="preserve">
+    <value>Đặt hàng</value>
+  </data>
+  <data name="Order_Status" xml:space="preserve">
+    <value>Trạng thái</value>
+  </data>
+  <data name="PasswordRequired" xml:space="preserve">
+    <value>Mật khẩu bắt buộc</value>
+  </data>
+  <data name="ProductCategory_DisplayOrder" xml:space="preserve">
+    <value>Thứ tự </value>
+  </data>
+  <data name="ProductCategory_MetaDescriptions" xml:space="preserve">
+    <value>Mô tả</value>
+  </data>
+  <data name="ProductCategory_MetaKeywords" xml:space="preserve">
+    <value>Từ khoá </value>
+  </data>
+  <data name="ProductCategory_MetaTitle" xml:space="preserve">
+    <value>Tiêu đề </value>
+  </data>
+  <data name="ProductCategory_Name" xml:space="preserve">
+    <value>Tên danh mục </value>
+  </data>
+  <data name="ProductCategory_ParentID" xml:space="preserve">
+    <value>Mã danh mục cha</value>
+  </data>
+  <data name="ProductCategory_SeoTitle" xml:space="preserve">
+    <value>Tiêu đề seo</value>
+  </data>
+  <data name="ProductCategory_ShowOnHome" xml:space="preserve">
+    <value>Hiển thị trang chủ</value>
+  </data>
+  <data name="ProductCategory_Status" xml:space="preserve">
+    <value>Trạng thái</value>
+  </data>
+  <data name="Productupdatesuccessful" xml:space="preserve">
+    <value>Cập nhật sản phẩm thành công</value>
+  </data>
+  <data name="Product_CategoryID" xml:space="preserve">
+    <value>Mã danh mục</value>
+  </data>
+  <data name="Product_Code" xml:space="preserve">
+    <value>mã sản phẩm</value>
+  </data>
+  <data name="Product_Description" xml:space="preserve">
+    <value>Mô tả</value>
+  </data>
+  <data name="Product_Detail" xml:space="preserve">
+    <value>Chi tiết</value>
+  </data>
+  <data name="Product_Image" xml:space="preserve">
+    <value>Hình ảnh</value>
+  </data>
+  <data name="Product_IncludedVAT" xml:space="preserve">
+    <value>VAT</value>
+  </data>
+  <data name="Product_MetaDescriptions" xml:space="preserve">
+    <value>Mô tả</value>
+  </data>
+  <data name="Product_MetaKeywords" xml:space="preserve">
+    <value>Từ khoá</value>
+  </data>
+  <data name="Product_MetaTitle" xml:space="preserve">
+    <value>Tiêu đề</value>
+  </data>
+  <data name="Product_MoreImages" xml:space="preserve">
+    <value>Ảnh liên quan</value>
+  </data>
+  <data name="Product_Name" xml:space="preserve">
+    <value>Tên sản phẩm</value>
+  </data>
+  <data name="Product_Price" xml:space="preserve">
+    <value>Giá</value>
+  </data>
+  <data name="Product_PromotionPrice" xml:space="preserve">
+    <value>Giá khuyến mãi</value>
+  </data>
+  <data name="Product_Quantity" xml:space="preserve">
+    <value>Chất lượng</value>
+  </data>
+  <data name="Product_Status" xml:space="preserve">
+    <value>Trạng thái</value>
+  </data>
+  <data name="Product_TopHot" xml:space="preserve">
+    <value>Sản phẩm mới</value>
+  </data>
+  <data name="Product_ViewCount" xml:space="preserve">
+    <value>Lượt xem</value>
+  </data>
+  <data name="Product_Warranty" xml:space="preserve">
+    <value>Bảo hành</value>
+  </data>
+  <data name="RequiredMenuname" xml:space="preserve">
+    <value>Tên menu bắt buộc</value>
+  </data>
+  <data name="Requiredproductname" xml:space="preserve">
+    <value>Tên sản phẩm bắt buộc</value>
+  </data>
+  <data name="RequiredSlidename" xml:space="preserve">
+    <value>Tên slide bắt buộc</value>
+  </data>
+  <data name="Slide_Description" xml:space="preserve">
+    <value>Mô tả</value>
+  </data>
+  <data name="Slide_DisplayOrder" xml:space="preserve">
+    <value>Thứ tự</value>
+  </data>
+  <data name="Slide_Image" xml:space="preserve">
+    <value>Hình ảnh</value>
+  </data>
+  <data name="Slide_Link" xml:space="preserve">
+    <value>Liên kết</value>
+  </data>
+  <data name="Slide_Status" xml:space="preserve">
+    <value>Trạng thái</value>
+  </data>
+  <data name="Tag_Name" xml:space="preserve">
+    <value>Tên</value>
+  </data>
+  <data name="Updateaccountsuccessfully" xml:space="preserve">
+    <value>Cập nhật tài khoản thành công</value>
+  </data>
+  <data name="Updatedslidessuccessfully" xml:space="preserve">
+    <value>Cập nhật slide thành công</value>
+  </data>
+  <data name="Updatefailed" xml:space="preserve">
+    <value>Cập nhật không thành công</value>
+  </data>
+  <data name="Updatemenusuccessful" xml:space="preserve">
+    <value>Cập nhật menu thành công</value>
+  </data>
+  <data name="Updatenewssuccessfully" xml:space="preserve">
+    <value>Cập nhật tin tức thành công</value>
+  </data>
+  <data name="Updatenewstypesuccessfully" xml:space="preserve">
+    <value>Cập nhật loại tin tức thành công</value>
+  </data>
+  <data name="Updateproducttypesuccessfully" xml:space="preserve">
+    <value>Cập nhật loại sản phẩm thành công</value>
+  </data>
+  <data name="UserGroup_Name" xml:space="preserve">
+    <value>Tên nhóm</value>
+  </data>
+  <data name="User_Address" xml:space="preserve">
+    <value>Địa chỉ</value>
+  </data>
+  <data name="User_DistrictID" xml:space="preserve">
+    <value>Huyện</value>
+  </data>
+  <data name="User_Email" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="User_GroupID" xml:space="preserve">
+    <value>Mã nhóm</value>
+  </data>
+  <data name="User_Name" xml:space="preserve">
+    <value>Tên</value>
+  </data>
+  <data name="User_Password" xml:space="preserve">
+    <value>Mật khẩu</value>
+  </data>
+  <data name="User_Phone" xml:space="preserve">
+    <value>Số điện thoại</value>
+  </data>
+  <data name="User_ProvinceID" xml:space="preserve">
+    <value>Tỉnh</value>
+  </data>
+  <data name="User_Status" xml:space="preserve">
+    <value>Trạng thái</value>
+  </data>
+  <data name="User_UserName" xml:space="preserve">
+    <value>Tên đăng nhập</value>
+  </data>
+  <data name="Vietnamese" xml:space="preserve">
+    <value>Tiếng Việt</value>
+  </data>
+  <data name="AccountnameExists" xml:space="preserve">
+    <value>Tên tài khoản đã tồn tại</value>
+  </data>
+  <data name="ProductNameExists" xml:space="preserve">
+    <value>Tên sản phẩm đã tồn tại</value>
+  </data>
+</root>

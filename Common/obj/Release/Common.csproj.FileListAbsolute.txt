@@ -1,0 +1,10 @@
+C:\Users\USER\Desktop\đồ án\OnlineShop\OnlineShop\OnlineShop\Common\bin\Release\Common.dll
+C:\Users\USER\Desktop\đồ án\OnlineShop\OnlineShop\OnlineShop\Common\bin\Release\Common.pdb
+C:\Users\USER\Desktop\đồ án\OnlineShop\OnlineShop\OnlineShop\Common\obj\Release\Common.csprojResolveAssemblyReference.cache
+C:\Users\USER\Desktop\đồ án\OnlineShop\OnlineShop\OnlineShop\Common\obj\Release\Common.dll
+C:\Users\USER\Desktop\đồ án\OnlineShop\OnlineShop\OnlineShop\Common\obj\Release\Common.pdb
+C:\Users\Hieu\Desktop\ASP.NET\OnlineShop\OnlineShop\Common\bin\Release\Common.dll
+C:\Users\Hieu\Desktop\ASP.NET\OnlineShop\OnlineShop\Common\bin\Release\Common.pdb
+C:\Users\Hieu\Desktop\ASP.NET\OnlineShop\OnlineShop\Common\obj\Release\Common.csprojResolveAssemblyReference.cache
+C:\Users\Hieu\Desktop\ASP.NET\OnlineShop\OnlineShop\Common\obj\Release\Common.dll
+C:\Users\Hieu\Desktop\ASP.NET\OnlineShop\OnlineShop\Common\obj\Release\Common.pdb

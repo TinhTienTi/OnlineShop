@@ -1,0 +1,465 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="About_Description" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="About_Detail" xml:space="preserve">
+    <value>Detail</value>
+  </data>
+  <data name="About_Image" xml:space="preserve">
+    <value>Image</value>
+  </data>
+  <data name="About_MetaDescriptions" xml:space="preserve">
+    <value>MetaDescriptions</value>
+  </data>
+  <data name="About_MetaKeywords" xml:space="preserve">
+    <value>MetaKeywords</value>
+  </data>
+  <data name="About_MetaTitle" xml:space="preserve">
+    <value>MetaTitle</value>
+  </data>
+  <data name="About_Name" xml:space="preserve">
+    <value>About Name</value>
+  </data>
+  <data name="About_Status" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="Accountnamerequired" xml:space="preserve">
+    <value>Account name required</value>
+  </data>
+  <data name="Addaccountsuccessfully" xml:space="preserve">
+    <value>Add account successfully</value>
+  </data>
+  <data name="Addfailed" xml:space="preserve">
+    <value>Add failed</value>
+  </data>
+  <data name="Addingaccountfailed" xml:space="preserve">
+    <value>Adding account failed</value>
+  </data>
+  <data name="Addmenusuccessfully" xml:space="preserve">
+    <value>Add menu successfully</value>
+  </data>
+  <data name="Addproductfailed" xml:space="preserve">
+    <value>Add product failed</value>
+  </data>
+  <data name="Addproductsuccessfully" xml:space="preserve">
+    <value>Add product successfully</value>
+  </data>
+  <data name="Addproducttypefailed" xml:space="preserve">
+    <value>Add product type failed</value>
+  </data>
+  <data name="AddSlidesuccessfully" xml:space="preserve">
+    <value>Add Slide successfully</value>
+  </data>
+  <data name="Addsuccessfulnewscategories" xml:space="preserve">
+    <value>Add successful news categories</value>
+  </data>
+  <data name="Addsuccessfulproductcategories" xml:space="preserve">
+    <value>Add successful product categories</value>
+  </data>
+  <data name="Category_DisplayOrder" xml:space="preserve">
+    <value>Order</value>
+  </data>
+  <data name="Category_MetaDescriptions" xml:space="preserve">
+    <value>MetaDescriptions</value>
+  </data>
+  <data name="Category_MetaKeywords" xml:space="preserve">
+    <value>MetaKeywords</value>
+  </data>
+  <data name="Category_MetaTitle" xml:space="preserve">
+    <value>Alias</value>
+  </data>
+  <data name="Category_Name" xml:space="preserve">
+    <value>Category Name</value>
+  </data>
+  <data name="Category_ParentID" xml:space="preserve">
+    <value>Parent Category</value>
+  </data>
+  <data name="Category_SeoTitle" xml:space="preserve">
+    <value>SeoTitle</value>
+  </data>
+  <data name="Category_ShowOnHome" xml:space="preserve">
+    <value>Display on home</value>
+  </data>
+  <data name="Category_Status" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="Content_CategoryID" xml:space="preserve">
+    <value>CategoryID</value>
+  </data>
+  <data name="Content_Description" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="Content_Detail" xml:space="preserve">
+    <value>Detail</value>
+  </data>
+  <data name="Content_Image" xml:space="preserve">
+    <value>Image</value>
+  </data>
+  <data name="Content_MetaDescriptions" xml:space="preserve">
+    <value>MetaDescriptions</value>
+  </data>
+  <data name="Content_MetaKeywords" xml:space="preserve">
+    <value>MetaKeywords</value>
+  </data>
+  <data name="Content_MetaTitle" xml:space="preserve">
+    <value>Content MetaTitle</value>
+  </data>
+  <data name="Content_Name" xml:space="preserve">
+    <value>Content Name</value>
+  </data>
+  <data name="Content_Status" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="Content_TopHot" xml:space="preserve">
+    <value>TopHot</value>
+  </data>
+  <data name="Content_ViewCount" xml:space="preserve">
+    <value>ViewCount</value>
+  </data>
+  <data name="Content_Warranty" xml:space="preserve">
+    <value>Warranty</value>
+  </data>
+  <data name="Deletesuccessful" xml:space="preserve">
+    <value>Delete successful</value>
+  </data>
+  <data name="English" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="MenuType_Name" xml:space="preserve">
+    <value>MenuType Name</value>
+  </data>
+  <data name="Menu_DisplayOrder" xml:space="preserve">
+    <value>Order</value>
+  </data>
+  <data name="Menu_Link" xml:space="preserve">
+    <value>Link</value>
+  </data>
+  <data name="Menu_Status" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="Menu_Target" xml:space="preserve">
+    <value>Menu Target</value>
+  </data>
+  <data name="Menu_Text" xml:space="preserve">
+    <value>Menu Text</value>
+  </data>
+  <data name="Menu_TypeID" xml:space="preserve">
+    <value>TypeID</value>
+  </data>
+  <data name="Nametypeofnewsrequired" xml:space="preserve">
+    <value>Name type of news required</value>
+  </data>
+  <data name="Order_CustomerID" xml:space="preserve">
+    <value>CustomerID</value>
+  </data>
+  <data name="Order_ShipAddress" xml:space="preserve">
+    <value>ShipAddress</value>
+  </data>
+  <data name="Order_ShipEmail" xml:space="preserve">
+    <value>ShipEmail</value>
+  </data>
+  <data name="Order_ShipMobile" xml:space="preserve">
+    <value>ShipMobile</value>
+  </data>
+  <data name="Order_ShipName" xml:space="preserve">
+    <value>ShipName</value>
+  </data>
+  <data name="Order_Status" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="PasswordRequired" xml:space="preserve">
+    <value>Password Required</value>
+  </data>
+  <data name="ProductCategory_DisplayOrder" xml:space="preserve">
+    <value>Order</value>
+  </data>
+  <data name="ProductCategory_MetaDescriptions" xml:space="preserve">
+    <value>MetaDescriptions</value>
+  </data>
+  <data name="ProductCategory_MetaKeywords" xml:space="preserve">
+    <value>MetaKeywords</value>
+  </data>
+  <data name="ProductCategory_MetaTitle" xml:space="preserve">
+    <value>MetaTitle</value>
+  </data>
+  <data name="ProductCategory_Name" xml:space="preserve">
+    <value>Product  Name</value>
+  </data>
+  <data name="ProductCategory_ParentID" xml:space="preserve">
+    <value>ParentID </value>
+  </data>
+  <data name="ProductCategory_SeoTitle" xml:space="preserve">
+    <value>SeoTitle</value>
+  </data>
+  <data name="ProductCategory_ShowOnHome" xml:space="preserve">
+    <value>Display on home</value>
+  </data>
+  <data name="ProductCategory_Status" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="Productupdatesuccessful" xml:space="preserve">
+    <value>Product update successful</value>
+  </data>
+  <data name="Product_CategoryID" xml:space="preserve">
+    <value>CategoryID Product</value>
+  </data>
+  <data name="Product_Code" xml:space="preserve">
+    <value>Code</value>
+  </data>
+  <data name="Product_Description" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="Product_Detail" xml:space="preserve">
+    <value>Detail</value>
+  </data>
+  <data name="Product_Image" xml:space="preserve">
+    <value>Image</value>
+  </data>
+  <data name="Product_IncludedVAT" xml:space="preserve">
+    <value>IncludedVAT</value>
+  </data>
+  <data name="Product_MetaDescriptions" xml:space="preserve">
+    <value>MetaDescriptions</value>
+  </data>
+  <data name="Product_MetaKeywords" xml:space="preserve">
+    <value>MetaKeywords</value>
+  </data>
+  <data name="Product_MetaTitle" xml:space="preserve">
+    <value>MetaTitle Product</value>
+  </data>
+  <data name="Product_MoreImages" xml:space="preserve">
+    <value>MoreImages</value>
+  </data>
+  <data name="Product_Name" xml:space="preserve">
+    <value>Product Name</value>
+  </data>
+  <data name="Product_Price" xml:space="preserve">
+    <value>Price</value>
+  </data>
+  <data name="Product_PromotionPrice" xml:space="preserve">
+    <value>PromotionPrice</value>
+  </data>
+  <data name="Product_Quantity" xml:space="preserve">
+    <value>Quantity</value>
+  </data>
+  <data name="Product_Status" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="Product_TopHot" xml:space="preserve">
+    <value>TopHot</value>
+  </data>
+  <data name="Product_ViewCount" xml:space="preserve">
+    <value>ViewCount</value>
+  </data>
+  <data name="Product_Warranty" xml:space="preserve">
+    <value>Warranty</value>
+  </data>
+  <data name="RequiredMenuname" xml:space="preserve">
+    <value>Required Menu name</value>
+  </data>
+  <data name="Requiredproductname" xml:space="preserve">
+    <value>Required product name</value>
+  </data>
+  <data name="RequiredSlidename" xml:space="preserve">
+    <value>Required Slide name</value>
+  </data>
+  <data name="Slide_Description" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="Slide_DisplayOrder" xml:space="preserve">
+    <value>Order</value>
+  </data>
+  <data name="Slide_Image" xml:space="preserve">
+    <value>Image</value>
+  </data>
+  <data name="Slide_Link" xml:space="preserve">
+    <value>Link</value>
+  </data>
+  <data name="Slide_Status" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="Tag_Name" xml:space="preserve">
+    <value>Tag Name</value>
+  </data>
+  <data name="Updateaccountsuccessfully" xml:space="preserve">
+    <value>Update account successfully</value>
+  </data>
+  <data name="Updatedslidessuccessfully" xml:space="preserve">
+    <value>Updated slides successfully</value>
+  </data>
+  <data name="Updatefailed" xml:space="preserve">
+    <value>Update failed</value>
+  </data>
+  <data name="Updatemenusuccessful" xml:space="preserve">
+    <value>Update menu successful</value>
+  </data>
+  <data name="Updatenewssuccessfully" xml:space="preserve">
+    <value>Update news successfully</value>
+  </data>
+  <data name="Updatenewstypesuccessfully" xml:space="preserve">
+    <value>Update news type successfully</value>
+  </data>
+  <data name="Updateproducttypesuccessfully" xml:space="preserve">
+    <value>Update product type successfully</value>
+  </data>
+  <data name="UserGroup_Name" xml:space="preserve">
+    <value>UserGroup Name</value>
+  </data>
+  <data name="User_Address" xml:space="preserve">
+    <value>Address</value>
+  </data>
+  <data name="User_DistrictID" xml:space="preserve">
+    <value>DistrictID</value>
+  </data>
+  <data name="User_Email" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="User_GroupID" xml:space="preserve">
+    <value>GroupID</value>
+  </data>
+  <data name="User_Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="User_Password" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="User_Phone" xml:space="preserve">
+    <value>Phone</value>
+  </data>
+  <data name="User_ProvinceID" xml:space="preserve">
+    <value>ProvinceID</value>
+  </data>
+  <data name="User_Status" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="User_UserName" xml:space="preserve">
+    <value>UserName</value>
+  </data>
+  <data name="Vietnamese" xml:space="preserve">
+    <value>Vietnamese</value>
+  </data>
+  <data name="AccountnameExists" xml:space="preserve">
+    <value>Account Exists.</value>
+  </data>
+  <data name="ProductNameExists" xml:space="preserve">
+    <value>Product Name Exists</value>
+  </data>
+</root>

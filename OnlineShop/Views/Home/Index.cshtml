@@ -1,0 +1,199 @@
+﻿
+@{
+    ViewBag.Title = "Trang Chủ";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var slides = (List<Models.EF.Slide>)ViewBag.Slides;
+    var listNewProducts = (List<Models.EF.Product>)ViewBag.NewProducts;
+    var listNewProductss = (List<Models.EF.Product>)ViewBag.NewProductss;
+    var listFeatureProducts = (List<Models.EF.Product>)ViewBag.ListFeatureProducts;
+}
+<!--Link javascrip-->
+@*<script src="~/Scripts/jquery-1.8.0.min.js"></script>*@
+<script src="~/Scripts/jquery.signalR-1.0.0.min.js"></script>
+<script src="@Url.Content("~/signalr/hubs")"></script>
+<script>
+    $(function () {
+        var counterhub = $.connection.counterHub;
+        $.connection.hub.start().done(function () {
+        });
+        counterhub.client.updatecounter = function (count) {
+            $("#counter").text(count);
+        }
+    });
+</script>
+<br />
+<style>
+    .thumbnail {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .caption {
+        position: absolute;
+        top: 0;
+        right: 0;
+        background: rgba(66, 139, 202, 0.75);
+        width: 100%;
+        height: 100%;
+        padding: 2%;
+        display: none;
+        text-align: center;
+        color: #fff !important;
+        z-index: 2;
+    }
+
+    .text {
+        font-weight: bold;
+        color: blue;
+        font-size: 20px;
+    }
+
+    * {
+        font-family: GoogleSans, sans-serif !important;
+        letter-spacing: 0 !important;
+    }
+</style>
+@section slide
+{
+    <div class="header_slide">
+        <div class="header_bottom_left">
+            <div class="categories">
+                @{ Html.RenderAction("ProductCategory", "Product");}
+                @{ Html.RenderAction("DMCategory", "Product");}
+            </div>
+        </div>
+        <div class="header_bottom_right">
+            <!--Slide-->
+            <div class="slider">
+                <div id="slider">
+                    <div id="mover" style="top: 20px;">
+                        @foreach (var item in slides)
+                        {
+                            foreach (var item1 in listNewProductss)
+                            {
+                                var url = "/chi-tiet/" + item1.MetaTitle + "-" + item1.ID;
+
+                                <div id="slide-1" class="slide">
+                                    <div class="slider-img">
+                                        <a href="@url"><img src="@item.Image" alt="tìm hiểu thêm"></a>
+                                    </div>
+                                </div>
+                            }
+                        }
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+}
+    <div class="content">
+        <div class="content_top" style="background:#007bff">
+            <div class="heading">
+                <h3>Sản Phẩm Mới</h3>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="section group" style="padding-right: 100px;">
+                    @foreach (var item in listNewProducts)
+                    {
+                        var url = "/chi-tiet/" + item.MetaTitle + "-" + item.ID;
+                        <div class="col-md-3">
+                            <div class="thumbnail" style="width:200px; height:200px">
+                                @if (item.Status == true)
+                                {
+                                    <div class="caption">
+                                        <h4>@item.Name</h4>
+                                        <p>@item.Description</p>
+                                        <p>
+                                            <a href="@url" class="btn btn-danger" rel="tooltip" title="" data-original-title="Xem chi tiết">Xem</a>
+                                            @if (item.Quantity > 0)
+                                            {
+                                                <a href="/them-gio-hang?productId=@item.ID&quantity=1" class="btn btn-success" rel="tooltip" data-original-title="Mua hàng">Mua</a>
+                                            }
+                                        </p>
+                                    </div> <a href="@url"><img src="@item.Image" alt="@item.Name" /></a>
+                                }
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+
+        <div class="content_bottom" style="background:#007bff; width: 100%;">
+            <div class="heading">
+                <h3>Sản Phẩm HOT</h3>
+            </div>
+            <div class="see">
+                @*<p><a href="#">Xem Tất Cả</a></p>*@
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="section group" style="padding-right: 100px;">
+                    @foreach (var item in listFeatureProducts)
+                    {
+                        var url = "/chi-tiet/" + item.MetaTitle + "-" + item.ID;
+                        <div class="col-md-3">
+                            <div class="thumbnail" style="width:200px; height:200px">
+                                @if (item.Status == true)
+                                {
+                                    <div class="caption">
+                                        <h4>@item.Name</h4>
+                                        <p>@item.Description</p>
+                                        <p>
+                                            <a href="@url" class="btn btn-danger" rel="tooltip" title="" data-original-title="Xem chi tiết">Xem</a>
+                                            @if (item.Quantity > 0)
+                                            {
+                                                <a href="/them-gio-hang?productId=@item.ID&quantity=1" class="btn btn-success" rel="tooltip" data-original-title="Mua hàng">Mua</a>
+                                            }
+                                        </p>
+                                    </div> <a href="@url"><img src="@item.Image" alt="@item.Name" /></a>
+                                }
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+<div class="container">
+    <button type="button" class="btn btn-primary">Khách hàng Online <span class="badge"> <strong id="counter" class="text"></strong></span></button>
+</div>
+<!--Javascrip-->
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("[rel='tooltip']").tooltip();
+        $('.thumbnail').hover(
+            function () {
+                $(this).find('.caption').slideDown(250);
+            },
+            function () {
+                $(this).find('.caption').slideUp(250);
+            }
+        );
+    });
+</script>
+
+<!-- Load Facebook SDK for JavaScript -->
+<div id="fb-root"></div>
+<script>
+    window.fbAsyncInit = function () {
+        FB.init({
+            xfbml: true,
+            version: 'v7.0'
+        });
+    };
+
+    (function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+</script>

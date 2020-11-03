@@ -1,0 +1,112 @@
+﻿@model PagedList.IPagedList<Models.EF.Category>
+@using PagedList.Mvc;
+@{
+    ViewBag.Title = "Quản lý người dùng";
+    Layout = "~/Areas/Admin/Views/Shared/_Layouts.cshtml";
+}
+@section header{
+    <span>DANH SÁCH LOẠI TIN TỨC</span>
+}
+<link href="~/Content/toastr.css" rel="stylesheet" />
+<div class="row">
+    <div class="col-lg-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                Bảng danh sách loại tin tức
+            </div>
+            <!-- /.panel-heading -->
+            <div class="panel-body">
+                @using (Html.BeginForm())
+                {
+                    <div class="row form-group">
+                        <div class="col-lg-12">
+                            <div class="col-md-4">
+                                <input type="text" value="@ViewBag.SearchString" class="form-control" name="searchString" />
+                            </div>
+                            <div class="col-md-4">
+                                <button type="submit" class="btn btn-success">Tìm kiếm</button>
+                                <a class="btn btn-primary" href="/Admin/Category/Create">Thêm mới</a>
+                            </div>
+                        </div>
+                    </div>
+                }
+                <div class="table-responsive">
+                    <table class="table table-striped table-bordered table-hover">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>ID Parent</th>
+                                <th>Tên Loại Tin Tức</th>
+                                <th>Trạng thái</th>
+                                <th>Tuỳ chọn</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>@item.ID</td>
+                                    <td>@item.ParentID</td>
+                                    <td>@item.Name</td>
+                                    <td>@item.Status</td>
+                                    <td>
+                                        <a href="/Admin/Category/Edit/@item.ID">
+                                            <button title="Cập nhật" class="btn btn-primary">
+                                                <i class="fa fa-pencil"> Cập nhật</i>
+                                            </button>
+                                        </a>
+                                        <button class="btn btn-danger" onclick="Delete(@item.ID)">
+                                            <i class="fas fa-minus-circle"></i> Xoá
+                                        </button>
+                                    </td>
+                                </tr>
+                            }
+
+                        </tbody>
+                    </table>
+                    @Html.PagedListPager(Model, page => Url.Action("Select", new { page, @searchString = @ViewBag.SearchString }))
+                </div>
+                <!-- /.table-responsive -->
+            </div>
+            <!-- /.panel-body -->
+        </div>
+    </div>
+</div>
+<script src="~/Content/jquery.min.js"></script>
+<script src="~/Scripts/toastr.js"></script>
+<script>
+    function Delete(id) {
+        $.ajax({
+            traditional: true,
+            url: "Category/DeleteUsingJson",
+            data: JSON.stringify({ ID: id }),
+            contentType: 'application/json; charset=utf-8',
+            type: 'POST',
+            dataType: 'json',
+            timeout: 60 * 60000,
+            error: function (xhr, e) {
+                toastr.error('Lỗi tìm kiếm. Mã lỗi ' + xhr.status, 'Thông báo', { timeOut: 3000 });
+            },
+            success: function (data) {
+                var _result = data.Result;
+                switch (_result) {
+                    case 1:
+                        var listResult = data.ListResult;
+                        if (listResult[0].Result == 1)
+                            toastr.success('Xoá sản phẩm thành công', 'Thông báo', { timeOut: 3000 });
+                        if (listResult[0].Result == 0)
+                            toastr.warning('Xoá sản phẩm không thành công. Có sản phẩm đang bán thuộc loại này.', 'Thông báo', { timeOut: 3000 });
+                        break;
+                    case 0:
+                        toastr.warning(_error, 'Thông báo', { timeOut: 3000 });
+                        break;
+                    case -1:
+                        toastr.err('Lỗi tìm kiếm.', 'Thông báo', { timeOut: 3000 });
+                        break;
+                }
+            }
+        });
+    }
+
+</script>

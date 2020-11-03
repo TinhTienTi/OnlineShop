@@ -1,0 +1,48 @@
+C:\Users\USER\Desktop\đồ án\OnlineShop\OnlineShop\OnlineShop\Models\bin\Release\Models.dll.config
+C:\Users\USER\Desktop\đồ án\OnlineShop\OnlineShop\OnlineShop\Models\bin\Release\Models.dll
+C:\Users\USER\Desktop\đồ án\OnlineShop\OnlineShop\OnlineShop\Models\bin\Release\Models.pdb
+C:\Users\USER\Desktop\đồ án\OnlineShop\OnlineShop\OnlineShop\Models\bin\Release\Common.dll
+C:\Users\USER\Desktop\đồ án\OnlineShop\OnlineShop\OnlineShop\Models\bin\Release\EntityFramework.dll
+C:\Users\USER\Desktop\đồ án\OnlineShop\OnlineShop\OnlineShop\Models\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\USER\Desktop\đồ án\OnlineShop\OnlineShop\OnlineShop\Models\bin\Release\PagedList.dll
+C:\Users\USER\Desktop\đồ án\OnlineShop\OnlineShop\OnlineShop\Models\bin\Release\PagedList.Mvc.dll
+C:\Users\USER\Desktop\đồ án\OnlineShop\OnlineShop\OnlineShop\Models\bin\Release\System.Web.WebPages.dll
+C:\Users\USER\Desktop\đồ án\OnlineShop\OnlineShop\OnlineShop\Models\bin\Release\Microsoft.Web.Infrastructure.dll
+C:\Users\USER\Desktop\đồ án\OnlineShop\OnlineShop\OnlineShop\Models\bin\Release\System.Web.Razor.dll
+C:\Users\USER\Desktop\đồ án\OnlineShop\OnlineShop\OnlineShop\Models\bin\Release\System.Web.WebPages.Deployment.dll
+C:\Users\USER\Desktop\đồ án\OnlineShop\OnlineShop\OnlineShop\Models\bin\Release\Common.pdb
+C:\Users\USER\Desktop\đồ án\OnlineShop\OnlineShop\OnlineShop\Models\bin\Release\EntityFramework.xml
+C:\Users\USER\Desktop\đồ án\OnlineShop\OnlineShop\OnlineShop\Models\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\USER\Desktop\đồ án\OnlineShop\OnlineShop\OnlineShop\Models\bin\Release\PagedList.xml
+C:\Users\USER\Desktop\đồ án\OnlineShop\OnlineShop\OnlineShop\Models\bin\Release\PagedList.Mvc.xml
+C:\Users\USER\Desktop\đồ án\OnlineShop\OnlineShop\OnlineShop\Models\bin\Release\System.Web.WebPages.xml
+C:\Users\USER\Desktop\đồ án\OnlineShop\OnlineShop\OnlineShop\Models\bin\Release\Microsoft.Web.Infrastructure.xml
+C:\Users\USER\Desktop\đồ án\OnlineShop\OnlineShop\OnlineShop\Models\bin\Release\System.Web.Razor.xml
+C:\Users\USER\Desktop\đồ án\OnlineShop\OnlineShop\OnlineShop\Models\bin\Release\System.Web.WebPages.Deployment.xml
+C:\Users\USER\Desktop\đồ án\OnlineShop\OnlineShop\OnlineShop\Models\obj\Release\Models.csprojResolveAssemblyReference.cache
+C:\Users\USER\Desktop\đồ án\OnlineShop\OnlineShop\OnlineShop\Models\obj\Release\Models.dll
+C:\Users\USER\Desktop\đồ án\OnlineShop\OnlineShop\OnlineShop\Models\obj\Release\Models.pdb
+C:\Users\Hieu\Desktop\ASP.NET\OnlineShop\OnlineShop\Models\bin\Release\Models.dll.config
+C:\Users\Hieu\Desktop\ASP.NET\OnlineShop\OnlineShop\Models\bin\Release\Models.dll
+C:\Users\Hieu\Desktop\ASP.NET\OnlineShop\OnlineShop\Models\bin\Release\Models.pdb
+C:\Users\Hieu\Desktop\ASP.NET\OnlineShop\OnlineShop\Models\bin\Release\Common.dll
+C:\Users\Hieu\Desktop\ASP.NET\OnlineShop\OnlineShop\Models\bin\Release\EntityFramework.dll
+C:\Users\Hieu\Desktop\ASP.NET\OnlineShop\OnlineShop\Models\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\Hieu\Desktop\ASP.NET\OnlineShop\OnlineShop\Models\bin\Release\PagedList.dll
+C:\Users\Hieu\Desktop\ASP.NET\OnlineShop\OnlineShop\Models\bin\Release\PagedList.Mvc.dll
+C:\Users\Hieu\Desktop\ASP.NET\OnlineShop\OnlineShop\Models\bin\Release\System.Web.WebPages.dll
+C:\Users\Hieu\Desktop\ASP.NET\OnlineShop\OnlineShop\Models\bin\Release\Microsoft.Web.Infrastructure.dll
+C:\Users\Hieu\Desktop\ASP.NET\OnlineShop\OnlineShop\Models\bin\Release\System.Web.Razor.dll
+C:\Users\Hieu\Desktop\ASP.NET\OnlineShop\OnlineShop\Models\bin\Release\System.Web.WebPages.Deployment.dll
+C:\Users\Hieu\Desktop\ASP.NET\OnlineShop\OnlineShop\Models\bin\Release\Common.pdb
+C:\Users\Hieu\Desktop\ASP.NET\OnlineShop\OnlineShop\Models\bin\Release\EntityFramework.xml
+C:\Users\Hieu\Desktop\ASP.NET\OnlineShop\OnlineShop\Models\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\Hieu\Desktop\ASP.NET\OnlineShop\OnlineShop\Models\bin\Release\PagedList.xml
+C:\Users\Hieu\Desktop\ASP.NET\OnlineShop\OnlineShop\Models\bin\Release\PagedList.Mvc.xml
+C:\Users\Hieu\Desktop\ASP.NET\OnlineShop\OnlineShop\Models\bin\Release\System.Web.WebPages.xml
+C:\Users\Hieu\Desktop\ASP.NET\OnlineShop\OnlineShop\Models\bin\Release\Microsoft.Web.Infrastructure.xml
+C:\Users\Hieu\Desktop\ASP.NET\OnlineShop\OnlineShop\Models\bin\Release\System.Web.Razor.xml
+C:\Users\Hieu\Desktop\ASP.NET\OnlineShop\OnlineShop\Models\bin\Release\System.Web.WebPages.Deployment.xml
+C:\Users\Hieu\Desktop\ASP.NET\OnlineShop\OnlineShop\Models\obj\Release\Models.csprojResolveAssemblyReference.cache
+C:\Users\Hieu\Desktop\ASP.NET\OnlineShop\OnlineShop\Models\obj\Release\Models.dll
+C:\Users\Hieu\Desktop\ASP.NET\OnlineShop\OnlineShop\Models\obj\Release\Models.pdb

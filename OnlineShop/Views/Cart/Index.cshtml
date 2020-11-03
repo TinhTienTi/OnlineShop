@@ -1,0 +1,132 @@
+﻿@using Models
+@using OnlineShop.Controllers
+
+@model IEnumerable<OnlineShop.Models.CartItem>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section jsFooter{
+    <script src="/assets/client/js/controller/cartController.js"></script>
+    <link rel=”stylesheet” href=”https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css” />
+}
+<style>
+    * {
+        font-family: GoogleSans, sans-serif !important;
+        letter-spacing: 0 !important;
+    }
+</style>
+<div class="content" style="border-bottom:3px solid green">
+    <div class="section group">
+        @if (Model.Count() > 0)
+        {
+            <table class="table table-hover" cellpadding="10" border="1">
+                <thead>
+                    <tr style="font-weight:bold;">
+                        <th scope="col">Tên sản phẩm</th>
+                        <th scope="col">SKU</th>
+                        <th scope="col">Ảnh</th>
+                        <th scope="col">Số lượng</th>
+                        <th scope="col">Đơn giá</th>
+                        <th scope="col">Khuyến mại</th>
+                        <th scope="col">Thành tiền</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @{
+                        decimal total = 0;
+                    }
+                    @foreach (var item in Model)
+                    {
+                        total += ((item.Product.PromotionPrice.HasValue ? item.Product.PromotionPrice : item.Product.Price).GetValueOrDefault(0) * item.Quantity);
+                        <tr>
+                            <td>@item.Product.Name</td>
+                            <td>@item.Product.Code</td>
+                            <td><img src="@item.Product.Image" width="120" /></td>
+                            <td><input style="width:50px;" type="number" class="txtQuantity" data-id="@item.Product.ID" value="@item.Quantity" min="1" step="1" /></td>
+                            <td>@(item.Product.PromotionPrice.HasValue ? item.Product.PromotionPrice.GetValueOrDefault(0).ToString("N0") : item.Product.Price.GetValueOrDefault(0).ToString("N0"))</td>
+                            <td>@((Math.Round(Convert.ToDouble(@item.Product.PromotionPrice / @item.Product.Price * 100), 1) == 0 ? 100 : Math.Round(Convert.ToDouble(@item.Product.PromotionPrice / @item.Product.Price * 100), 1)) - 100) %</td>
+
+                            <td>@(((item.Product.PromotionPrice.HasValue ? item.Product.PromotionPrice.GetValueOrDefault(0) : item.Product.Price.GetValueOrDefault(0)) * item.Quantity).ToString("N0"))</td>
+
+                            <td>
+                                <button class="btn btn-warning">
+                                    <a href="#" data-id="@item.Product.ID" class="btn-delete">
+                                        <img src="~/assets/client/images/trash-alt-regular.svg" width="18" height="18" />
+                                </button>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+            <!--Button Tiếp tục mua-->
+            <button type="button" id="btnContinue" class="btn btn-primary" style=" margin-left:260px">Tiếp tục mua</button>
+            <!--Button Cập nhật-->
+            <button type="button" id="btnUpdate" class="btn btn-success">Cập nhật</button>
+            <!--Button Xoá giỏ hàng-->
+            <button type="button" id="btnDeleteAll" class="btn btn-danger">Xoá giỏ hàng</button>
+            <!--Button Thanh toán online-->
+            <button type="button" id="btnDeleteAll" class="btn btn-default">
+                @Html.ActionLink("Thanh toán online", "PaymentWithPaypal", "PayPalPayment")
+            </button>
+            <!--Session Dang nhap-->
+            var session = (OnlineShop.Common.UserLogin)Session[OnlineShop.Common.CommonConstants.USER_SESSION];
+            if (session == null)
+            {
+                <div class="all-comments">
+                    <hr />
+                    <center><i>Khách hàng muốn thanh toán khi nhận hàng vui lòng đăng nhập <a href="/dang-nhap/">tại đây</a> </i></center>
+                </div>
+            }
+            else
+            {
+                <!--Button Thanh toán-->
+                <button type="button" id="btnPayment" class="btn btn-dark">Thanh toán</button>
+            }
+        }
+        else
+        {
+            <i style="padding-left:45%;">
+                <img src="~/assets/client/images/shoppingcart128px.png" />
+            </i>
+            <p class="text" style="padding-left:35%; color:red; text-transform:uppercase;">Bạn chưa có sản phẩm nào trong giỏ hàng</p>
+            <br />
+            <a href="/san-pham">← Tiếp tục mua sắm</a>
+        }
+    </div>
+</div>
+<script src="~/Scripts/jquery-1.11.1.min.js"></script>
+<!--Tạo hiệu ứng Slide bằng JQUERY-->
+<script>
+    $('#myCarousel').carousel({
+        interval: 4000
+    });
+</script>
+<!--bootstrap slide châm ngôn-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
+<!--Liên hệ-->
+<div style="margin-top:30px;">
+    <h2 style="font-size:25px;text-align:center">	<a href="/Lien-he">Mọi chi tiết xin liên hệ tại đây</a></h2>
+</div>
+<script>
+    function showMessage() {
+        $.ajax({
+            traditional: true,
+            url: "ShowMessage",
+            contentType: 'application/json; charset=utf-8',
+            type: 'GET',
+            dataType: 'json',
+            timeout: 60 * 60000,
+            success: function (data) {
+                var _result = data.Result;
+                switch (_result) {
+                    case 1:
+                        toastr.warning(_error, 'Thông báo', { timeOut: 3000 });
+                        break;
+                }
+            }
+        });
+    }
+</script>

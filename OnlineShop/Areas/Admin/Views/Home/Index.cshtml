@@ -1,0 +1,139 @@
+﻿@{
+    ViewBag.Title = "Trang Chủ";
+    Layout = "~/Areas/Admin/Views/Shared/_Layouts.cshtml";
+}
+<link href="~/Content/toastr.css" rel="stylesheet" />
+<script src="~/Scripts/toastr.js"></script>
+<script src="~/Scripts/jquery-1.8.0.js"></script>
+<script>
+    var dataPoints = [];
+    $.ajax({
+        traditional: true,
+        url: "Home/ReportTop10ProductSelling",
+        contentType: 'application/json; charset=utf-8',
+        type: 'POST',
+        dataType: 'json',
+        timeout: 60 * 60000,
+        error:
+            function (xhr, e) {
+
+            },
+        success: function (data) {
+            var _result = data.Result;
+            var _error = data.Error;
+            var _type = data.Type;
+            switch (_result) {
+                case 1:
+                    var listResult = data.ListResult;
+                    for (var i = 0; i < listResult.length; i++) {
+                        dataPoints.push({ label: listResult[i].ProductName, y: listResult[i].Revenue });
+                    }
+                    var d = new Date();
+                    var n = d.getMonth();
+                    var m = d.getFullYear();
+                    var fullMonth = n.toString() + '/' + m.toString();
+                    $(function () {
+                        var chart = new CanvasJS.Chart("chartContainer", {
+                            theme: "theme2",
+                            zoomEnabled: true,
+                            animationEnabled: true,
+                            title: {
+                                text: "Top 5 Sản Phẩm Có Doanh Thu Cao Nhất Tháng " + fullMonth
+                            },
+                            data: [
+                                {
+                                    type: "line",
+                                    dataPoints: dataPoints,
+                                }
+                            ]
+                        });
+                        chart.render();
+                        var x = i;
+                        var updateInterval = 4000;
+                        var updateChart = function () {
+                            var result2 = dataPoints
+                            if (x < result2.length) {
+                                dataPoints.push({ label: listResult[x].Czas, y: listResult[x].Wartosc4 });
+                                x++;
+                            }
+                            chart.render();
+                        };
+                        setInterval(function () { updateChart() }, updateInterval);
+                    });
+                    break;
+                case 0:
+                    break;
+                case -1:
+                    break;
+            }
+        }
+    });
+    var dataPoints1 = [];
+    $.ajax({
+        traditional: true,
+        url: "Home/ReportTop10QuantityProduct",
+        contentType: 'application/json; charset=utf-8',
+        type: 'POST',
+        dataType: 'json',
+        timeout: 60 * 60000,
+        error:
+            function (xhr, e) {
+
+            },
+        success: function (data) {
+            var _result = data.Result;
+            var _error = data.Error;
+            var _type = data.Type;
+            switch (_result) {
+                case 1:
+                    var listResult = data.ListResult;
+                    for (var i = 0; i < listResult.length; i++) {
+                        dataPoints1.push({ label: listResult[i].ProductName, y: listResult[i].Quantity });
+                    }
+                    var d = new Date();
+                    var n = d.getMonth();
+                    var m = d.getFullYear();
+                    var fullMonth = n.toString() + '/' + m.toString();
+                    $(function () {
+                        var chart = new CanvasJS.Chart("chartContainer1", {
+                            theme: "theme2",
+                            zoomEnabled: true,
+                            animationEnabled: true,
+                            title: {
+                                text: "Top 5 Sản Phẩm Có Số Lượng Bán Cao Nhất Tháng " + fullMonth
+                            },
+                            data: [
+                                {
+                                    type: "line",
+                                    dataPoints: dataPoints1,
+                                }
+                            ]
+                        });
+                        chart.render();
+                        var x = i;
+                        var updateInterval = 4000;
+                        var updateChart = function () {
+                            var result2 = dataPoints1
+                            if (x < result2.length) {
+                                dataPoints1.push({ label: listResult[x].Czas, y: listResult[x].Wartosc4 });
+                                x++;
+                            }
+                            chart.render();
+                        };
+                        setInterval(function () { updateChart() }, updateInterval);
+                    });
+                    break;
+                case 0:
+                    break;
+                case -1:
+                    break;
+            }
+        }
+    });
+</script>
+<div id="chartContainer" style="height: 300px; width: 100%; height: 250px;"></div>
+<br />
+<br />
+<br />
+<div id="chartContainer1" style="height: 300px; width: 100%; height: 250px;"></div>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>

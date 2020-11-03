@@ -1,0 +1,125 @@
+﻿@model OnlineShop.Models.RegisterModel
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Đăng ký Thành viên</title>
+
+    <link href="~/assets/client/Register/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <!-- Custom styles for this template-->
+    <link href="~/assets/client/Register/sb-admin-2.min.css" rel="stylesheet" />
+</head>
+<body class="bg-gradient-primary">
+    @section jsFooter{
+        <script src="/assets/client/js/controller/userController.js"></script>
+    }
+    <div class="container">
+        <div class="card o-hidden border-0 shadow-lg my-5">
+            <div class="card-body p-0">
+                <!-- Nested Row within Card Body -->
+                <div class="row">
+
+                    <div class="col-lg-12">
+                        <div class="p-5">
+                            <div class="text-center">
+                                <h1 class="h4 text-gray-900 mb-4">Create an Account!</h1>
+                            </div>
+                            @using (Html.BeginForm("Register", "User", FormMethod.Post))
+                            {
+                                @Html.AntiForgeryToken()
+
+                                <div class="form-horizontal">
+                                    <div class="form-group">
+                                        @Html.ValidationSummary(false, "", new { @class = "text-danger" })
+                                        @if (ViewBag.Success != null)
+                                        {
+                                            <div class="alert alert-success">@ViewBag.Success</div>
+                                        }
+                                    </div>
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.UserName, new { @class = "control-label col-md-2" })
+                                        <div class="col-md-12">
+                                            @Html.TextBoxFor(model => model.UserName, new { @class = "form-control" })
+                                            @Html.ValidationMessageFor(model => model.UserName, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.Password, new { @class = "control-label col-md-2" })
+                                        <div class="col-md-12">
+                                            @Html.PasswordFor(model => model.Password, new { @class = "form-control" })
+                                            @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.ConfirmPassword, new { @class = "control-label col-md-2" })
+                                        <div class="col-md-12">
+                                            @Html.PasswordFor(model => model.ConfirmPassword, new { @class = "form-control" })
+                                            @Html.ValidationMessageFor(model => model.ConfirmPassword, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-2" })
+                                        <div class="col-md-12">
+                                            @Html.TextBoxFor(model => model.Name, new { @class = "form-control" })
+                                            @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.Address, htmlAttributes: new { @class = "control-label col-md-2" })
+                                        <div class="col-md-12">
+                                            @Html.TextAreaFor(model => model.Address, new { @class = "form-control" })
+                                            @Html.ValidationMessageFor(model => model.Address, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label col-md-2" })
+                                        <div class="col-md-12">
+                                            @Html.TextBoxFor(model => model.Email, new { @class = "form-control" })
+                                            @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.Phone, htmlAttributes: new { @class = "control-label col-md-2" })
+                                        <div class="col-md-12">
+                                            @Html.TextBoxFor(model => model.Phone, new { @class = "form-control" })
+                                            @Html.ValidationMessageFor(model => model.Phone, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.ProvinceID, htmlAttributes: new { @class = "control-label col-md-2" })
+                                        <div class="col-md-12">
+                                            @Html.TextBoxFor(model => model.ProvinceID, new { @class = "form-control" })
+                                            @Html.ValidationMessageFor(model => model.ProvinceID, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.DistrictID, htmlAttributes: new { @class = "control-label col-md-2" })
+                                        <div class="col-md-12">
+                                            @Html.TextBoxFor(model => model.DistrictID, new { @class = "form-control" })
+                                            @Html.ValidationMessageFor(model => model.DistrictID, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <div class="col-md-offset-2 col-md-10">
+                                            <input type="submit" value="Đăng ký" class="btn btn-primary" />
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Bootstrap core JavaScript-->
+    <script src="~/assets/client/Register/jquery.min.js"></script>
+    <script src="~/assets/client/Register/bootstrap.bundle.min.js"></script>
+    <script src="~/assets/client/Register/jquery.easing.min.js"></script>
+    <script src="~/assets/client/Register/sb-admin-2.min.js"></script>
+</body>
+

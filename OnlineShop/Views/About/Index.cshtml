@@ -1,0 +1,232 @@
+﻿
+
+@model Models.EF.About
+@{
+                /**/
+
+                ViewBag.Title = "About";
+                Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<br />
+<!--fix color-->
+<div class="form-group">
+    <!--Màu nền-->
+    <div class="row">
+        <div class="col-md-2">
+            <form class="form-horizontal">
+                <div class="form-group form-group-sm">
+                    <label for="truyen-background" class="col-sm-2 col-md-5 control-label"><span class="label label-default">Màu nền</span></label>
+                    <div class="col-sm-5 col-md-7">
+                        <select id="movie-background" class="form-group">
+                            <option value="#F4F4F4">Xám nhạt</option>
+                            <option value="#EAE4D3">Màu sepia</option>
+                            <option value="#FFFFE5">Vàng nhạt</option>
+                            <option value="#FAFAC8">Vàng đậm</option>
+                            <option value="#EFEFAB">Vàng ố</option>
+                            <option value="#FFF">Màu trắng</option>
+                            <option value="#232323">Màu tối</option>
+                        </select>
+                    </div>
+                </div>
+            </form>
+        </div>
+        @*<div class="clear"></div>*@
+        <!--Màu chữ-->
+        <div class="col-md-2">
+            <form class="form-horizontal">
+                <div class="form-group form-group-sm">
+                    <label for="truyen-background" class="col-sm-2 col-md-5 control-label"><span class="label label-default">Màu chữ</span></label>
+                    <div class="col-sm-5 col-md-7">
+                        <select id="movie-color" class="form-group">
+                            <option value="#F4F4F4">Xám nhạt</option>
+                            <option value="#EAE4D3">Màu sepia</option>
+                            <option value="#FFFFE5">Vàng nhạt</option>
+                            <option value="#FAFAC8">Vàng đậm</option>
+                            <option value="#EFEFAB">Vàng ố</option>
+                            <option value="#FFF">Màu trắng</option>
+                            <option value="#232323">Màu tối</option>
+                        </select>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<body>
+    <!--banner video-->
+    <div id="banner">
+        <video width="1025" autoplay>
+            <source src="~/assets/client/images/homebanerabout.mp4" type="video/mp4">
+        </video>
+
+    </div>
+    <h1 class="section-heading text-uppercase" style="font-size:30px; padding:0px; padding-top:15px; text-align:center; color:#111;font-weight:bold;"> Giới thiệu công ty </h1>
+    <div id="thongtin">
+        <ul>
+            <li style="float:left; margin-bottom:20px;clear:left;margin-top:30px">
+                <img width="300" height="200" style="margin-right:20px;border:2px solid green;float:left; clear:left" src="~/assets/client/images/gioithieu/start.jpg" />
+                <h2 style="font-size:25px">Khởi đầu</h2>
+                <br>
+                Chúng ta đang sống trong một thời đại bùng nổ của xã hội và smartphone, nhưng với nhiều người không vì thế mà quên thói quen đọc sách, sưu tầm sách. Kể cả với giới trẻ, những ngày hội sách vẫn đều đặn diễn ra thu hút sự quan tâm của rất nhiều người.Việc mua sách, tìm kiếm sách trong thời đại internet cũng có nhiều điểm khác. Những nhà sách, tiệm sách truyền thống vẫn thu hút sự quan tâm của nhieuf người. Nhưng song song với đó là sự phát triển nhanh chóng của nhà sách online, với nhiều ưu điểm và tiện lợi,...
+            </li>
+            <li style="float:left; margin-bottom:20px;clear:left">
+                <img width="300" height="200" style="margin-right:20px;border:2px solid green;float:left;clear:left" src="~/assets/client/images/gioithieu/hinhthanh.jpg" />
+                <h2 style="font-size:25px">BookStore ra đời</h2>
+                <br>
+                Để đáp ứng được nhu cầu hiện tại của khách hàng nên chúng tôi quyết định lập ra trang BookStore. BookStore chuyên cung cấp các loại sách,văn phòng phẩm, dụng cụ học tập, lưu niệm,... sản phẩm đa dạng, uy tín, luôn đặt khách hàng lên hàng đầu.
+            </li>
+            <li>
+                <img width="300" height="200" style="margin-right:20px;border:2px solid green;float:left;clear:left" src="~/assets/client/images/gioithieu/uudiem.jpg" />
+                <h2 style="font-size:25px">Ưu điểm</h2>
+                <br>
+                Không lo sách lậu,giá cả hợp lý do tiết kiệm chi phí về mặt bằng,nhiều chương chình khuyến mãi hấp dẫn, Tiết kiệm thời gian không phải di chuyển đén nhà sách cũng như việc tìm sách chỉ với 1 nút nhấn, giao hàng tận nơi và thanh toán với nhiều phương thức.
+            </li>
+
+        </ul>
+
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <section>
+        <div class="container" style="border-bottom:3px solid green">
+            <div class="text-center">
+                <h2 class="section-heading text-uppercase" style="font-size:30px">Danh mục sản phẩm</h2>
+
+            </div>
+            <br>
+            <br>
+            <div class="row">
+                <div class="col-lg-4 col-sm-6 mb-4">
+                    <div class="portfolio-item">
+                        <a class="portfolio-link" data-toggle="modal">
+                            <img width="250" height="300" style="border:2px solid green" src="assets/client/images/vanhoc/banoiduhoc.jpg" alt="" />
+                        </a>
+                        <div>
+                            <div class="portfolio-caption-heading">Văn học</div>
+                            <div class="portfolio-caption-subheading text-muted">Cung cấp các thể loại như: văn học trong nước, ngoài nước, tiểu thuyết,...</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 mb-4">
+                    <div class="portfolio-item">
+                        <a class="portfolio-link" data-toggle="modal">
+                            <img width="250" height="300" style="border:2px solid green" src="assets/client/images/Sgk/tienganh.jpg" alt="" />
+                        </a>
+                        <div>
+                            <div class="portfolio-caption-heading">Sách giáo khoa</div>
+                            <div class="portfolio-caption-subheading text-muted">Cung cấp các sách giáo khoa các cấp từ lớp 10 - 12, sách tham khảo, tài liệu,...</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 mb-4">
+                    <div class="portfolio-item">
+                        <a class="portfolio-link" data-toggle="modal">
+                            <img width="250" height="300" style="border:2px solid green" src="assets/client/images/thieunhi/sutu.jpg" alt="" />
+                        </a>
+                        <div>
+                            <div class="portfolio-caption-heading">Thiếu nhi</div>
+                            <div class="portfolio-caption-subheading text-muted">Cung cấp sách thiếu nhi với nhiều thể loại: truyện tranh các loại, cổ tích, tập tô màu,...</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
+                    <div class="portfolio-item">
+                        <a class="portfolio-link" data-toggle="modal">
+                            <img width="250" height="300" style="border:2px solid green" src="~/assets/client/images/amnhac.jpg" alt="" />
+                        </a>
+                        <div>
+                            <div class="portfolio-caption-heading">Chuyên ngành</div>
+                            <div class="portfolio-caption-subheading text-muted">Cung cấp một số sách chuyên ngành như: Y học, khoa học xã hội, âm nhạc, chính tri - xã hội,...</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 mb-4 mb-sm-0">
+                    <div class="portfolio-item">
+                        <a class="portfolio-link" data-toggle="modal">
+                            <img width="250" height="300" style="border:2px solid green" src="assets/client/images/vanphongpham/giaya4.jpg" alt="" />
+                        </a>
+                        <div>
+                            <div class="portfolio-caption-heading">Văn phòng phẩm</div>
+                            <div class="portfolio-caption-subheading text-muted">Cung cấp một số sản phẩm văn phòng như: bút,giấy các loại, thước, dụng cụ học tập,...</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <div class="portfolio-item">
+                        <a class="portfolio-link" data-toggle="modal">
+                            <img width="250" height="300" style="border:2px solid green" src="~/assets/client/images/tuong.jpg" alt="" />
+                        </a>
+                        <div>
+                            <div class="portfolio-caption-heading">Thể loại khác</div>
+                            <div class="portfolio-caption-subheading text-muted">Cung cấp một số sản phẩm như: đồ chơi các loại, đồ lưu niệm, sách đời sống,...</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+</body>
+<br>
+<br>
+<br>
+<div style="background:#efcab2;margin-top: 10px ">
+
+    <div class="container">
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators" style="margin-left:220px">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner" style="width:950px;">
+                <div class="item active">
+                    <div class="carousel-caption">
+                        <h1>Bill Gates</h1>
+                        <p>Mọi người sẽ không bao giờ ngó ngàng đến lòng tự trọng của bạn, điều mà họ quan tâm chính là thành tựu mà bạn đạt được. Do đó, trước khi có được những thành tựu thì bạn đừng nên quá chú trọng hay cường điệu lòng tự trọng của bản thân mình lên.</p>
+                    </div>
+                    <img src="~/assets/client/images/nencamngon.jpg" alt="Bill Gates">
+
+                </div>
+                <div class="item">
+                    <img src="~/assets/client/images/nencamngon.jpg" alt="Dr. Seuss">
+                    <div class="carousel-caption">
+                        <h1>Dr. Seuss</h1>
+                        <p>Hãy là chính mình và nói điều bạn muốn nói. Bởi những người thấy phiền lòng chẳng có ý nghĩa, và những người có ý nghĩa sẽ không thấy phiền lòng.</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="~/assets/client/images/nencamngon.jpg" alt="Denis Waitley">
+                    <div class="carousel-caption">
+                        <h1>Denis Waitley</h1>
+                        <p>Hạnh phúc là thứ không thể đến được, sở hữu được, kiếm được hay mặc vào được. Nó là trải nghiệm tinh thần của mỗi phút giây ta sống với tình yêu, vinh dự và lòng biết ơn.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="~/Scripts/jquery-1.11.1.min.js"></script>
+<!--Tạo hiệu ứng Slide bằng JQUERY-->
+<script>
+    $('#myCarousel').carousel({
+        interval: 4000
+    });
+</script>
+<!--bootstrap slide châm ngôn-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
+<!--Liên hệ-->
+<div style="margin-top:30px;">
+
+    <h2 style="font-size:25px;text-align:center">	<a href="/Lien-he">Mọi chi tiết xin liên hệ tại đây</a></h2>
+</div>
