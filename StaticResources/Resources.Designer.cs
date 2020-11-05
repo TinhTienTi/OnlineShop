@@ -583,6 +583,15 @@ namespace StaticResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Tên loại sản phẩm đã tồn tại..
+        /// </summary>
+        public static string ProdCateNameExists {
+            get {
+                return ResourceManager.GetString("ProdCateNameExists", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Mã danh mục.
         /// </summary>
         public static string Product_CategoryID {

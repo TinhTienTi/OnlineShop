@@ -152,7 +152,7 @@ namespace OnlineShop.Controllers
                     UpdateProductQuantity.Update(orderDetail.ProductID, orderDetail.Quantity);
                     // Tính tổng tiền
                     total += (item.Product.Price.GetValueOrDefault(0) * item.Quantity);
-                }
+                }                
                 string content = System.IO.File.ReadAllText(Server.MapPath("~/assets/client/Template/NewOrder.html"));
                 content = content.Replace("{{CustomerName}}", shipName);
                 content = content.Replace("{{Phone}}", mobile);
@@ -167,6 +167,8 @@ namespace OnlineShop.Controllers
             {
 
             }
+            // Xoá toàn bộ giỏ hàng
+            DeleteAll();
             return Redirect("/hoan-thanh");
         }
         public ActionResult Success()

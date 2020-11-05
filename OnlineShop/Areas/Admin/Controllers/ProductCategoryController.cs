@@ -37,37 +37,34 @@ namespace OnlineShop.Areas.Admin.Controllers
         {
             if (pdcategory.Name != null)
             {
-                if (ModelState.IsValid)
+                if (GetProductCateName.GetProdCateName(pdcategory.Name) == 1)
+                {
+                    SetParentID();
+                    SetAlert(StaticResources.Resources.ProdCateNameExists, "error");
+                    return View("Create");
+                }
+                else if (ModelState.IsValid)
                 {
                     var dao = new ProductCategoryDao();
                     pdcategory.MetaTitle = pdcategory.MetaTitle;
-
                     pdcategory.CreatedDate = DateTime.Now;
                     var session = (Common.UserLogin)Session[OnlineShop.Common.CommonConstants.USER_SESSION];
                     pdcategory.CreatedBy = session.UserName;
                     pdcategory.MetaKeywords = pdcategory.MetaTitle;
                     pdcategory.MetaDescriptions = pdcategory.MetaTitle;
-
                     long id = dao.Insert(pdcategory);
                     if (id > 0)
                     {
-
-                        //   SetAlert("Thêm loại sản phẩm thành công", "success");
                         SetAlert(StaticResources.Resources.Addsuccessfulproductcategories, "success");
-
                         return RedirectToAction("Select", "ProductCategory");
                     }
                     else
                     {
-                        //  ModelState.AddModelError("", "Thêm sản phẩm không thành công");
                         ModelState.AddModelError("", StaticResources.Resources.Addproducttypefailed);
                     }
                 }
-
             }
             SetParentID();
-            // SetAlert("Thêm sản phẩm  không thành công", "success");
-            //  SetAlert("Tên sản phẩm bắt buộc", "error");
             SetAlert(StaticResources.Resources.Requiredproductname, "error");
             return View("Create");
         }
@@ -93,7 +90,6 @@ namespace OnlineShop.Areas.Admin.Controllers
                 var result = dao.Update(pdproduct);
                 if (result)
                 {
-                    //   SetAlert("Cập nhật loại sản phẩm thành công", "success");
                     SetAlert(StaticResources.Resources.Updateproducttypesuccessfully, "success");
                     return RedirectToAction("Select", "ProductCategory");
                 }
@@ -111,7 +107,6 @@ namespace OnlineShop.Areas.Admin.Controllers
         public ActionResult Delete(int id)
         {
             new ProductCategoryDao().Delete(id);
-            //   SetAlert("Xoá thành công", "success");
             SetAlert(StaticResources.Resources.Deletesuccessful, "success");
             return RedirectToAction("Index");
         }
@@ -127,7 +122,6 @@ namespace OnlineShop.Areas.Admin.Controllers
                     Today = DateTime.Now.ToString(),
                     ListResult = listResult
                 };
-
                 var jsonResult = Json(listSuccess, JsonRequestBehavior.AllowGet);
                 jsonResult.MaxJsonLength = int.MaxValue;
                 return jsonResult;

@@ -45,6 +45,11 @@ namespace OnlineShop.Controllers
             {
                 ViewBag.ListProduct = productDao.ListProduct().Where(x => x.CategoryID == loaiSanPham).OrderByDescending(x => x.Price).ToList();
             }
+            // Giá tất cả và loại sản khác rỗng
+            else if (gia == null && loaiSanPham != null)
+            {
+                ViewBag.ListProduct = productDao.ListProduct().Where(x => x.CategoryID == loaiSanPham).ToList();
+            }
             return View();
         }
         [ChildActionOnly]

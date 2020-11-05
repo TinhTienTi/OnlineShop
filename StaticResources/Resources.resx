@@ -462,4 +462,7 @@
   <data name="ProductNameExists" xml:space="preserve">
     <value>Tên sản phẩm đã tồn tại</value>
   </data>
+  <data name="ProdCateNameExists" xml:space="preserve">
+    <value>Tên loại sản phẩm đã tồn tại.</value>
+  </data>
 </root>

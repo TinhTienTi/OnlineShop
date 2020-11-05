@@ -3339,6 +3339,9 @@
     <Content Include="assets\client\fonts\fontawesome-webfont.svg" />
     <Content Include="assets\client\font\glyphicons-halflings-regular.svg" />
     <Content Include="assets\client\images\about_img.jpg" />
+    <Content Include="assets\client\images\Advantages\express-delivery.png" />
+    <Content Include="assets\client\images\Advantages\product-return.png" />
+    <Content Include="assets\client\images\Advantages\save-money.png" />
     <Content Include="assets\client\images\amnhac.jpg" />
     <Content Include="assets\client\images\arrow-next.png" />
     <Content Include="assets\client\images\arrow-prev.png" />

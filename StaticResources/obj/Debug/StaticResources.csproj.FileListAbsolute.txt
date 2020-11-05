@@ -122,3 +122,4 @@ E:\OnlineShop\StaticResources\obj\Debug\StaticResources.csproj.CoreCompileInputs
 E:\OnlineShop\StaticResources\obj\Debug\en\StaticResources.resources.dll
 E:\OnlineShop\StaticResources\obj\Debug\StaticResources.dll
 E:\OnlineShop\StaticResources\obj\Debug\StaticResources.pdb
+E:\OnlineShop\StaticResources\obj\Debug\StaticResources.csprojAssemblyReference.cache
