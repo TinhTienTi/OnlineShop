@@ -52,9 +52,31 @@
         font-family: GoogleSans, sans-serif !important;
         letter-spacing: 0 !important;
     }
+    /**/
+    article {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        padding: 20px;
+    }
 </style>
 @section slide
 {
+<p>
+   
+    <span>
+        <img src="~/assets/client/images/trending.png" width="50" height="50" />
+        <marquee width="90%">
+            @foreach (var item in listNewProducts)
+            {
+                var url = "/chi-tiet/" + item.MetaTitle + "-" + item.ID;
+                <a href="@url" style="padding-left: 50px;"><img src="@item.Image" height="50" width="50" />@item.Name  <span style="color:red; font-style:italic"> - @(item.PromotionPrice == null ? item.Price.Value.ToString("N0") : item.PromotionPrice.Value.ToString("N0")) VND</span></a>
+            }
+        </marquee>
+    </span>
+</p>
     <div class="header_slide">
         <div class="header_bottom_left">
             <div class="categories">
@@ -88,79 +110,82 @@
         <div class="clear"></div>
     </div>
 }
-    <div class="content">
-        <div class="content_top" style="background:#007bff">
-            <div class="heading">
-                <h3>Sản Phẩm Mới</h3>
-            </div>
-            <div class="clear"></div>
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="section group" style="padding-right: 100px;">
-                    @foreach (var item in listNewProducts)
-                    {
-                        var url = "/chi-tiet/" + item.MetaTitle + "-" + item.ID;
-                        <div class="col-md-3">
-                            <div class="thumbnail" style="width:200px; height:200px">
-                                @if (item.Status == true)
-                                {
-                                    <div class="caption">
-                                        <h4>@item.Name</h4>
-                                        <p>@item.Description</p>
-                                        <p>
-                                            <a href="@url" class="btn btn-danger" rel="tooltip" title="" data-original-title="Xem chi tiết">Xem</a>
-                                            @if (item.Quantity > 0)
-                                            {
-                                                <a href="/them-gio-hang?productId=@item.ID&quantity=1" class="btn btn-success" rel="tooltip" data-original-title="Mua hàng">Mua</a>
-                                            }
-                                        </p>
-                                    </div> <a href="@url"><img src="@item.Image" alt="@item.Name" /></a>
-                                }
-                            </div>
-                        </div>
-                    }
-                </div>
-            </div>
-        </div>
 
-        <div class="content_bottom" style="background:#007bff; width: 100%;">
-            <div class="heading">
-                <h3>Sản Phẩm HOT</h3>
-            </div>
-            <div class="see">
-                @*<p><a href="#">Xem Tất Cả</a></p>*@
-            </div>
-            <div class="clear"></div>
+<div class="content">
+    <div class="content_top" style="background:#007bff">
+        <div class="heading">
+            <h3>Sản Phẩm Mới</h3>
         </div>
-        <div class="container">
-            <div class="row">
-                <div class="section group" style="padding-right: 100px;">
-                    @foreach (var item in listFeatureProducts)
-                    {
-                        var url = "/chi-tiet/" + item.MetaTitle + "-" + item.ID;
-                        <div class="col-md-3">
-                            <div class="thumbnail" style="width:200px; height:200px">
-                                @if (item.Status == true)
-                                {
-                                    <div class="caption">
-                                        <h4>@item.Name</h4>
-                                        <p>@item.Description</p>
-                                        <p>
-                                            <a href="@url" class="btn btn-danger" rel="tooltip" title="" data-original-title="Xem chi tiết">Xem</a>
-                                            @if (item.Quantity > 0)
-                                            {
-                                                <a href="/them-gio-hang?productId=@item.ID&quantity=1" class="btn btn-success" rel="tooltip" data-original-title="Mua hàng">Mua</a>
-                                            }
-                                        </p>
-                                    </div> <a href="@url"><img src="@item.Image" alt="@item.Name" /></a>
-                                }
-                            </div>
+        <div class="clear"></div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="section group" style="padding-right: 100px;">
+                @foreach (var item in listNewProducts)
+                {
+                    var url = "/chi-tiet/" + item.MetaTitle + "-" + item.ID;
+                    <div class="col-md-3">
+                        <div class="thumbnail" style="width:200px; height:200px">
+                            @if (item.Status == true)
+                            {
+                                <div class="caption">
+                                    <h4>@item.Name</h4>
+                                    <p>@item.Description</p>
+                                    <p>
+                                        <a href="@url" class="btn btn-danger" rel="tooltip" title="" data-original-title="Xem chi tiết">Xem</a>
+                                        @if (item.Quantity > 0)
+                                        {
+                                            <a href="/them-gio-hang?productId=@item.ID&quantity=1" class="btn btn-success" rel="tooltip" data-original-title="Mua hàng">Mua</a>
+                                        }
+                                    </p>
+                                </div> <a href="@url"><img src="@item.Image" alt="@item.Name" /></a>
+                            }
                         </div>
-                    }
-                </div>
+                    </div>
+                }
             </div>
         </div>
+    </div>
+
+    <div class="content_bottom" style="background:#007bff; width: 100%;">
+        <div class="heading">
+            <h3>Sản Phẩm HOT</h3>
+        </div>
+        <div class="see">
+            @*<p><a href="#">Xem Tất Cả</a></p>*@
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="section group" style="padding-right: 100px;">
+                @foreach (var item in listFeatureProducts)
+                {
+                    var url = "/chi-tiet/" + item.MetaTitle + "-" + item.ID;
+                    <div class="col-md-3">
+                        <div class="thumbnail" style="width:200px; height:200px">
+                            @if (item.Status == true)
+                            {
+                                <div class="caption">
+                                    <h4>@item.Name</h4>
+                                    <p>@item.Description</p>
+                                    <p>
+                                        <a href="@url" class="btn btn-danger" rel="tooltip" title="" data-original-title="Xem chi tiết">Xem</a>
+                                        @if (item.Quantity > 0)
+                                        {
+                                            <a href="/them-gio-hang?productId=@item.ID&quantity=1" class="btn btn-success" rel="tooltip" data-original-title="Mua hàng">Mua</a>
+                                        }
+                                    </p>
+                                </div> <a href="@url"><img src="@item.Image" alt="@item.Name" /></a>
+                            }
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
 <div class="container">
     <button type="button" class="btn btn-primary">Khách hàng Online <span class="badge"> <strong id="counter" class="text"></strong></span></button>
 </div>

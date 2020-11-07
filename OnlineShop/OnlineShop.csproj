@@ -4610,6 +4610,7 @@
     <Content Include="assets\client\images\tag.png" />
     <Content Include="assets\client\images\tivi-plasma-sieu-phang.jpg" />
     <Content Include="assets\client\images\trash-alt-regular.svg" />
+    <Content Include="assets\client\images\trending.png" />
     <Content Include="assets\client\images\tuong.jpg" />
     <Content Include="assets\client\images\twitter.png" />
     <Content Include="assets\client\images\user-minus-solid.svg" />
@@ -5871,6 +5872,8 @@
     <Content Include="Views\Product\Detail.cshtml" />
     <Content Include="Views\Home\PolicyPayment.cshtml" />
     <Content Include="Views\Home\PolicyInfomation.cshtml" />
+    <Content Include="Views\Home\Returns.cshtml" />
+    <Content Include="Views\Home\Shipping.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

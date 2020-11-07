@@ -66,5 +66,15 @@ namespace OnlineShop.Controllers
         {
             return View();
         }
+        // Đổi trả
+        public ActionResult Returns()
+        {
+            return View();
+        }
+        // Giao Nhận
+        public ActionResult Shipping()
+        {
+            return View();
+        }
     }
 }

@@ -40,7 +40,7 @@ namespace Models.DAO
         }
         public List<Product> ListFeatureProduct(int top)
         {
-            return db.Products.Where(x => x.TopHot != null && x.ViewCount > 7 && x.Status == true).OrderByDescending(x => x.CreatedDate).Take(top).ToList();
+            return db.Products.Where(x => x.TopHot != null && x.ViewCount > 10 && x.Status == true).OrderByDescending(x => x.CreatedDate).Take(top).ToList();
         }
         public List<Product> ListProductPaging(long categoryID, ref int totalRecord, int pageIndex = 1, int pageSize = 2)
         {
