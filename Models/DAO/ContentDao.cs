@@ -2,11 +2,9 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Common;
 using PagedList;
-using System.Web;
+using System.Data;
 
 namespace Model.Dao
 {
@@ -83,6 +81,7 @@ namespace Model.Dao
         {
             return db.Tags.Find(id);
         }
+       
         public long Create(Content content)
         {
             //Xử lý alias
@@ -112,13 +111,10 @@ namespace Model.Dao
                     {
                         this.InsertTag(tagId, tag);
                     }
-
                     //insert to content tag
                     this.InsertContentTag(content.ID, tagId);
-
                 }
             }
-
             return content.ID;
         }
         public long Edit(Content entity)
@@ -151,7 +147,6 @@ namespace Model.Dao
                     {
                         this.InsertTag(tagId, tag);
                     }
-
                     //insert to content tag
                     this.InsertContentTag(content.ID, tagId);
 

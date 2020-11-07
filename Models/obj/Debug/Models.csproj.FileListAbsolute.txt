@@ -406,3 +406,6 @@ E:\OnlineShop\Models\obj\Debug\Models.csproj.CoreCompileInputs.cache
 E:\OnlineShop\Models\obj\Debug\Models.csproj.CopyComplete
 E:\OnlineShop\Models\obj\Debug\Models.dll
 E:\OnlineShop\Models\obj\Debug\Models.pdb
+E:\OnlineShop\Models\bin\Debug\Dapper.dll
+E:\OnlineShop\Models\bin\Debug\Dapper.pdb
+E:\OnlineShop\Models\bin\Debug\Dapper.xml

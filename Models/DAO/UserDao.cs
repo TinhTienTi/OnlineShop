@@ -18,7 +18,6 @@ namespace Models.DAO
             db = new OnlineShopDbContext();
         }
         //Dang nhap
- 
         public int Login(string userName, string passWord, bool isLoginAdmin = false)
         {
             var result = db.Users.SingleOrDefault(x => x.UserName == userName);
@@ -58,8 +57,6 @@ namespace Models.DAO
                 }
             }
         }
-
-
         public long Insert(User entity)
         {
             db.Users.Add(entity);

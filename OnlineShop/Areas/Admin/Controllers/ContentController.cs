@@ -1,13 +1,13 @@
-﻿
-using Model.Dao;
+﻿using Model.Dao;
 using Models.DAO;
 using Models.EF;
 using OnlineShop.Common;
-using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
+using System.Data.SqlClient;
+using System.Configuration;
+using Dapper;
+using System.Data;
 
 namespace OnlineShop.Areas.Admin.Controllers
 {
@@ -38,7 +38,6 @@ namespace OnlineShop.Areas.Admin.Controllers
             var content = dao.GetByID(id);
 
             SetViewBag(content.CategoryID);
-
             return View(content);
         }
 
@@ -70,7 +69,17 @@ namespace OnlineShop.Areas.Admin.Controllers
             SetViewBag(content.CategoryID);
             return View("Index");
         }
+        // Kiểm tra tên đã tồn tại
+        public static int CheckName(string name)
+        {
+            using (IDbConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["OnlineShopDbConnect"].ToString()))
+            {
+                if (connection.State == ConnectionState.Closed)
+                    connection.Open();
+                return connection.Query<int>("Check_ContentName", new { Name = name }, commandType: CommandType.StoredProcedure).FirstOrDefault();
+            }
 
+        }
         [HttpPost]
         [ValidateInput(false)]
         public ActionResult Create(Content model)
@@ -80,8 +89,16 @@ namespace OnlineShop.Areas.Admin.Controllers
                 var session = (UserLogin)Session[CommonConstants.USER_SESSION];
                 model.CreatedBy = session.UserName;
                 var culture = Session[CommonConstants.CurrentCulture];
-                new ContentDao().Create(model);
-                return RedirectToAction("Index");
+                if (CheckName(model.Name) == 1)
+                {
+                    SetViewBag();
+                    return View();
+                }
+                else
+                {
+                    new ContentDao().Create(model);
+                    return RedirectToAction("Index");
+                }
             }
             SetViewBag();
             return View();

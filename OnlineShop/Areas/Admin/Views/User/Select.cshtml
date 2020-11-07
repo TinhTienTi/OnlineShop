@@ -67,22 +67,10 @@
                                                 </button>
                                             </a>
                                             <button class="btn btn-sm btn-danger" onclick="Delete( @item.ID)"> Xoá</button>
-                                            @*<button class="btn btn-warning">
-                                                    <i class="fa fa-trash-o">
-                                                        @Ajax.ActionLink("Xoá", "Delete", new { @id = item.ID }, new AjaxOptions
-                                                    {
-                                                        Confirm = "Bạn có muốn xoá?",
-                                                        OnComplete = "$('#row_" + @item.ID + "').remove()",
-                                                        HttpMethod = "Delete"
-                                                    })
-                                                    </i>
-                                                </button>*@
-
                                         </td>
                                     </tr>
                                 }
                             }
-
                         </tbody>
                     </table>
                     @Html.PagedListPager(Model, page => Url.Action("Select", new { page, @searchString = @ViewBag.SearchString }))
@@ -114,9 +102,9 @@
                     case 1:
                         var listResult = data.ListResult;
                         if (listResult[0].Result == 1)
-                            toastr.success('Xoá sản phẩm thành công', 'Thông báo', { timeOut: 3000 });
+                            toastr.success('Xoá thành công', 'Thông báo', { timeOut: 3000 });
                         if (listResult[0].Result == 0)
-                            toastr.warning('Xoá sản phẩm không thành công. Có sản phẩm đang bán thuộc loại này.', 'Thông báo', { timeOut: 3000 });
+                            toastr.warning('Xoá không thành công. Có sản phẩm đang bán thuộc loại này.', 'Thông báo', { timeOut: 3000 });
                         break;
                     case 0:
                         toastr.warning(_error, 'Thông báo', { timeOut: 3000 });
